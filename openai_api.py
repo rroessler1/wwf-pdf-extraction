@@ -1,5 +1,21 @@
 import base64
+
 from openai import OpenAI
+from pydantic import BaseModel
+
+from constants import OPENAI_PROMPT
+
+
+class GroceryProduct(BaseModel):
+    product_name: str
+    original_price: str
+    discount_price: str
+    percentage_discount: float
+    discount_details: str
+
+
+class Results(BaseModel):
+    all_products: list[GroceryProduct]
 
 
 class OpenAIClient:
@@ -15,7 +31,7 @@ class OpenAIClient:
         return base64.b64encode(image).decode('utf-8')
 
     def get_data_from_image(self, base64_image):
-        response = self.client.chat.completions.create(
+        response = self.client.beta.chat.completions.parse(
         model="gpt-4o-mini",
         messages=[
             {
@@ -23,13 +39,7 @@ class OpenAIClient:
             "content": [
                 {
                 "type": "text",
-                "text": '''
-You are a helpful assistant that will help me extract information from leaflets of various Swiss grocery stores. Extract the following content in CSV format: the name of the product, the original price, the discounted price, the percentage discount (if available), discount details (if available), the weight (if available), and other details such as country of origin (if available). Here is the example CSV structure:
-
-product, original_price, discount_price, percentage_discount, discount_details, weight, details
-schweins-schulterbraten, 1.49 CHF, .99 CHF, 33%, pro 100g, ca. 1 kg, Schweiz, ...
-
-                ''',
+                "text": OPENAI_PROMPT,
                 },
                 {
                 "type": "image_url",
@@ -40,5 +50,6 @@ schweins-schulterbraten, 1.49 CHF, .99 CHF, 33%, pro 100g, ca. 1 kg, Schweiz, ..
             ],
             }
         ],
+        response_format=Results,
         )
         return response.choices[0]

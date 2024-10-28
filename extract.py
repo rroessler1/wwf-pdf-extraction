@@ -30,5 +30,7 @@ for filename in os.listdir(PDF_DIR):
             image.save(img_byte_arr, format='PNG')
             img_byte_arr = img_byte_arr.getvalue()
             print("Calling ChatGPT...")
-            response = openai_client.extract(img_byte_arr)
-            print(response.message.content)
+            response = openai_client.extract(img_byte_arr).message.parsed
+            print(f"Found {len(response.all_products)} products.")
+            for product in response.all_products:
+                print(product)
