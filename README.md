@@ -8,8 +8,8 @@ The Leaflet Product Extractor is a Python-based application designed to extract 
 ## Project Structure
 
 ├──leaflet-product-extractor/\
-│   ├── leaflet_processing/ \
 │   ├── __init__.py \
+│   ├── leaflet_processing/ \
 │   ├── leaflet_reader.py # Handles reading and image extraction from leaflets \
 ├──  openai_integration/ \
 │   ├── __init__.py \
