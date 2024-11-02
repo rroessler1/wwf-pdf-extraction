@@ -1,1 +1,0 @@
-OPENAI_PROMPT = "You are a helpful assistant that will help me extract information from leaflets of various Swiss grocery stores. For every product in the image I upload, extract the following content: the name of the product, the original price, the discounted price, the percentage discount (if available), discount details (if available)."
