@@ -1,5 +1,3 @@
-# main_pipeline.py
-
 from leaflet_processing.leaflet_reader import LeafletReader
 from openai_integration.openai_client import OpenAIClient
 from result_handling.result_saver import ResultSaver
