@@ -1,4 +1,6 @@
 .venv
+venv
 openai_api_key.txt
 pdf-files/
 **/.DS_Store
+**/__pycache__

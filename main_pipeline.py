@@ -24,7 +24,7 @@ def main():
 
     for pdf_images in all_pdf_images:
         for image_data in pdf_images:
-            response = openai_client.extract(image_data.getvalue())
+            response = openai_client.extract(image_data.getvalue()).message.parsed
             all_products.extend(response.all_products)
 
     # Convert all_products to DataFrame for categorization
