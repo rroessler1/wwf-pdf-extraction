@@ -5,6 +5,18 @@
 The Leaflet Product Extractor is a Python-based application designed to extract product information from leaflets of various Swiss grocery stores. It leverages OpenAI's API to analyze images of the leaflets and extract essential product details, including product names, prices, discounts, and more.
 
 
+### Installation
+
+1. **Install Python dependencies**:
+   ```bash
+   pip install -r requirements.txt
+
+2. **Install Poppler** (required for PDF processing):
+
+    macOS:
+    ```bash
+    brew install poppler
+    ```
 ## Project Structure
 
 ├──leaflet-product-extractor/\
