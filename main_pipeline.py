@@ -2,6 +2,7 @@ from leaflet_processing.leaflet_reader import LeafletReader
 from openai_integration.openai_client import OpenAIClient
 from result_handling.result_saver import ResultSaver
 from categorization.product_categorizer import ProductCategorizer
+from confirmation.price_validation import price_valudator
 import pandas as pd
 
 PDF_DIR = "pdf-files"
@@ -33,7 +34,7 @@ def main():
 
         # Categorize products
         categorized_df = categorizer.categorize_products(None, product_df, openai_client)
-
+        categorized_df['price_check'] = price_valudator(categorized_df)
         # Save categorized products to an Excel file
         output_path = result_saver.save_to_excel(categorized_df)
         print(f"Categorized results saved at: {output_path}")
