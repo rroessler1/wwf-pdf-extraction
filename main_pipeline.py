@@ -19,12 +19,12 @@ def main():
     result_saver = ResultSaver(output_dir="results")
     categorizer = ProductCategorizer()
 
-    all_pdf_images = leaflet_reader.process_leaflets()
+    all_pdf_images = leaflet_reader.process_leaflets(do_download=False)
     all_products = []
 
     for pdf_images in all_pdf_images:
         for image_data in pdf_images:
-            response = openai_client.extract(image_data.getvalue()).message.parsed
+            response = openai_client.extract(image_data.getvalue())
             all_products.extend(response.all_products)
 
     # Convert all_products to DataFrame for categorization

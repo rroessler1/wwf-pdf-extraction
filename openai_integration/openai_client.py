@@ -52,9 +52,9 @@ class OpenAIClient:
             ],
             response_format=Results,
         )
-        
+
         # Extract and parse the response
-        return response.choices[0]
+        return response.choices[0].message.parsed
 
     def categorize_products(self, products: pd.DataFrame) -> CategorizationResult:
         """
@@ -80,12 +80,12 @@ class OpenAIClient:
         )
 
         # Extract and parse the response
-        return response.choices[0]
+        return response.choices[0].message.parsed
 
     @staticmethod
     def build_product_categorization_prompt(products: pd.DataFrame) -> str:
         prompt: str = CATEGORIZATION_USER_PROMPT
-        for product in products:
-            prompt+= product["product_name"] + "\n"
+        for product in products['product_name']:
+            prompt += product + "\n"
 
         return prompt
