@@ -32,7 +32,7 @@ def main():
         product_df = pd.DataFrame([product.dict() for product in all_products])
 
         # Categorize products
-        categorized_df = categorizer.categorize_products(None, product_df)
+        categorized_df = categorizer.categorize_products(None, product_df, openai_client)
 
         # Save categorized products to an Excel file
         output_path = result_saver.save_to_excel(categorized_df)
