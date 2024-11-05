@@ -85,7 +85,5 @@ class OpenAIClient:
     @staticmethod
     def build_product_categorization_prompt(products: pd.DataFrame) -> str:
         prompt: str = CATEGORIZATION_USER_PROMPT
-        for product in products['product_name']:
-            prompt += product + "\n"
-
+        prompt += "\n".join(products['product_name'])
         return prompt
