@@ -10,7 +10,7 @@ class LeafletReader:
     def __init__(self, pdf_dir: str, download_url: str):
         """
         Initializes the LeafletReader with the directory for PDFs and download URL.
-        
+
         Parameters:
             pdf_dir (str): Directory to save downloaded PDFs.
             download_url (str): URL of the leaflet folder to download.
@@ -38,23 +38,24 @@ class LeafletReader:
         """
         images = convert_from_path(pdf_path)
         image_bytes = []
-        
+
         for image in images:
             img_byte_arr = io.BytesIO()
             image.save(img_byte_arr, format='PNG')
             img_byte_arr.seek(0)
             image_bytes.append(img_byte_arr)
-        
+
         return image_bytes
 
-    def process_leaflets(self) -> List[List[io.BytesIO]]:
+    def process_leaflets(self, do_download=True) -> List[List[io.BytesIO]]:
         """
         Downloads leaflets and converts each PDF into images.
 
         Returns:
             List[List[io.BytesIO]]: List of image byte arrays for each PDF.
         """
-        self.download_leaflet()
+        if do_download:
+            self.download_leaflet()
         all_images = []
 
         for filename in os.listdir(self.pdf_dir):
@@ -64,5 +65,5 @@ class LeafletReader:
                 pdf_images = self.split_pdf_to_images(pdf_path)
                 all_images.append(pdf_images)
                 print(f"{filename} converted to images.")
-        
+
         return all_images

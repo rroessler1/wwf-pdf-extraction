@@ -19,12 +19,12 @@ def main():
     result_saver = ResultSaver(output_dir="results")
     categorizer = ProductCategorizer()
 
-    all_pdf_images = leaflet_reader.process_leaflets()
+    all_pdf_images = leaflet_reader.process_leaflets(do_download=False)
     all_products = []
 
     for pdf_images in all_pdf_images:
         for image_data in pdf_images:
-            response = openai_client.extract(image_data.getvalue()).message.parsed
+            response = openai_client.extract(image_data.getvalue())
             all_products.extend(response.all_products)
 
     # Convert all_products to DataFrame for categorization
@@ -32,7 +32,7 @@ def main():
         product_df = pd.DataFrame([product.dict() for product in all_products])
 
         # Categorize products
-        categorized_df = categorizer.categorize_products(None, product_df)
+        categorized_df = categorizer.categorize_products(None, product_df, openai_client)
 
         # Save categorized products to an Excel file
         output_path = result_saver.save_to_excel(categorized_df)

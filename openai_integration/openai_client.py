@@ -1,7 +1,13 @@
 import base64
+
+import pandas as pd
 from openai import OpenAI
+
+from categorization.categorization_system_prompt import CATEGORIZATION_SYSTEM_PROMPT
+from categorization.categorization_user_prompt import CATEGORIZATION_USER_PROMPT
 from leaflet_processing.constants import OPENAI_PROMPT
-from .models import Results
+from .models import Results, CategorizationResult
+
 
 class OpenAIClient:
     def __init__(self, api_key: str):
@@ -46,6 +52,38 @@ class OpenAIClient:
             ],
             response_format=Results,
         )
-        
+
         # Extract and parse the response
-        return response.choices[0]
+        return response.choices[0].message.parsed
+
+    def categorize_products(self, products: pd.DataFrame) -> CategorizationResult:
+        """
+        Sends prompt to OpenAI to get product categorization for products
+        :param products: product data
+        :return: product categorization data
+        """
+
+        response = self.client.beta.chat.completions.parse(
+            model="gpt-4o-mini",
+            messages=[
+                {
+                    "role": "system",
+                    "content": CATEGORIZATION_SYSTEM_PROMPT
+                },
+                {
+                    "role": "user",
+                    "content": self.build_product_categorization_prompt(products)
+                }
+            ],
+            response_format=CategorizationResult,
+            temperature=0.5
+        )
+
+        # Extract and parse the response
+        return response.choices[0].message.parsed
+
+    @staticmethod
+    def build_product_categorization_prompt(products: pd.DataFrame) -> str:
+        prompt: str = CATEGORIZATION_USER_PROMPT
+        prompt += "\n".join(products['product_name'])
+        return prompt
