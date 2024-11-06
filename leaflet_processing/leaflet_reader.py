@@ -52,7 +52,7 @@ class LeafletReader:
         Downloads leaflets and converts each PDF into images.
 
         Returns:
-            List[List[io.BytesIO]]: List of image byte arrays for each PDF.
+            List[tuple(str, List[io.BytesIO])]: List of (file name, images) for each PDF.
         """
         if do_download:
             self.download_leaflet()
@@ -63,7 +63,7 @@ class LeafletReader:
                 pdf_path = os.path.join(self.pdf_dir, filename)
                 print(f"Processing {filename}...")
                 pdf_images = self.split_pdf_to_images(pdf_path)
-                all_images.append(pdf_images)
+                all_images.append((os.path.basename(filename), pdf_images))
                 print(f"{filename} converted to images.")
 
         return all_images
