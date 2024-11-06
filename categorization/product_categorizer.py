@@ -4,7 +4,7 @@ import pandas as pd
 from typing import Any
 from PIL import Image
 
-from openai_integration.models import CategorizationResult
+from openai_integration.models import CategorizationResult, ProductCategory
 from openai_integration.openai_client import OpenAIClient
 
 
@@ -24,17 +24,19 @@ class ProductCategorizer:
             pd.DataFrame: DataFrame with an added 'Category' column for product categorization.
         """
 
-        categorization_results: CategorizationResult = openai_client.categorize_products(data)
-
-        product_categories = []
-        for product in categorization_results.all_products:
-            product_categories.append(product.category.value)
+        product_categories: list[ProductCategory] = []
+        product_names = list(data['product_name'])
+        step_size = 5
+        for i in range(0, len(product_names), step_size):
+            categorization_results = openai_client.categorize_products(product_names[i: i+step_size])
+            product_categories.extend(categorization_results.categories)
 
         if len(data.index) == len(product_categories):
-            data['Category'] = product_categories
+            data['Category'] = [c.value for c in product_categories]
         else:
             # TODO: maybe we should also have ChatGPT return the original product name,
             # so if the length doesn't match, we can still include the data for most of them.
-            raise Warning("Length of the data and the assigned categories do not match!")
+            print(f"Length of the data {len(data.index)} and the assigned categories {len(product_categories)} do not match!")
+            print(product_categories)
 
         return data

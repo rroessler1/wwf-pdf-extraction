@@ -7,7 +7,7 @@ from typing import List, Optional
 class GroceryProduct(BaseModel):
     """
     Model for a grocery product extracted from the leaflet.
-    
+
     Attributes:
         product_name (str): The name of the product.
         original_price (Optional[str]): The original price of the product.
@@ -24,7 +24,7 @@ class GroceryProduct(BaseModel):
 class Results(BaseModel):
     """
     Model for storing all extracted grocery products from the leaflet.
-    
+
     Attributes:
         all_products (List[GroceryProduct]): List of extracted products.
     """
@@ -41,17 +41,6 @@ class ProductCategory(Enum):
     VEGETABLES = "Grillgemüse"
     NO_GRILL_PRODUCT = "Kein Grillprodukt"
 
-class CategorizationProduct(BaseModel):
-    """
-    Model for storing the results of the categorization task for one product.
-
-    Attributes:
-        category (str): The name of the Category
-        explanation (str): Brief explanation of the decision
-    """
-    category: ProductCategory
-    explanation: str
-
 class CategorizationResult(BaseModel):
     """
     Model for storing the results of the categorization task for all products.
@@ -59,4 +48,4 @@ class CategorizationResult(BaseModel):
     Attributes:
         all_products (List[CategorizationProduct]): List of products with their categorization.
     """
-    all_products: List[CategorizationProduct]
+    categories: List[ProductCategory]

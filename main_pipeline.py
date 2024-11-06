@@ -45,7 +45,7 @@ def main():
 
         # Categorize products
         categorized_df = categorizer.categorize_products(None, product_df, openai_client)
-        categorized_df['price_check'] = price_valudator(categorized_df)
+        # categorized_df['price_check'] = price_valudator(categorized_df)
         append_metadata(categorized_df)
 
         # Save categorized products to an Excel file

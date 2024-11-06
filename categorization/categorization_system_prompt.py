@@ -145,19 +145,17 @@ If you encounter a product, assign it to the correct category using the descript
 
 
 ### Instructions
-- **Categorize with precision**: Assign each product to the most accurate category based on the descriptions.
-- **Avoid errors**: Double-check the criteria for each category before making a classification.
-- **Stay concise and clear**: Provide answers with straightforward explanations of your choices.
+    - I will send you at most 5 products at a time.  Each product is on a newline.  For each product, return the categorization.
 
----
+### Example
+Mariniertes Hähnchenbrustfilet
+Hackbraten
+RACLETTE-KÄSE IN SCHEIBEN
+Evian, 6 x 1.5 Liter
 
-### Example Usage
-Product: "Mariniertes Hähnchenbrustfilet"
-- Category: Grillfleisch (Geflügel)
-- Explanation:
 
-Product: "Hackbraten"
-- Category: Kein Grillprodukt (Not a Grill Product) – No indication that it's intended for grilling.
-- Explanation:
-
+Grillfleisch (Geflügel)
+Kein Grillprodukt
+Käse
+Kein Grillprodukt
 """

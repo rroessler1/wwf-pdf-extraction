@@ -56,7 +56,7 @@ class OpenAIClient:
         # Extract and parse the response
         return response.choices[0].message.parsed
 
-    def categorize_products(self, products: pd.DataFrame) -> CategorizationResult:
+    def categorize_products(self, products: list[str]) -> CategorizationResult:
         """
         Sends prompt to OpenAI to get product categorization for products
         :param products: product data
@@ -83,7 +83,6 @@ class OpenAIClient:
         return response.choices[0].message.parsed
 
     @staticmethod
-    def build_product_categorization_prompt(products: pd.DataFrame) -> str:
-        prompt: str = CATEGORIZATION_USER_PROMPT
-        prompt += "\n".join(products['product_name'])
-        return prompt
+    def build_product_categorization_prompt(products: list[str]) -> str:
+        return CATEGORIZATION_USER_PROMPT + "\n".join(products)
+        prompt += "\n".join(products['product_name'].str.replace('\n', ' ', regex=True))
