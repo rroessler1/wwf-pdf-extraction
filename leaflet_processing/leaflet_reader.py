@@ -4,6 +4,7 @@ import gdown
 import glob
 import os
 
+from natsort import natsorted
 from typing import List
 from pdf2image import convert_from_path
 from PyPDF2 import PdfReader
@@ -21,11 +22,11 @@ class LeafletReader:
         """
         self.download_url = download_url
         
-        if do_download:
-            self.download_leaflet()
+        # if do_download:
+        #     self.download_leaflet()
             
-        self.all_files = os.listdir(self.pdf_dir)
-        self.selected_files = os.listdir(self.pdf_dir)
+        # self.all_files = os.listdir(self.pdf_dir)
+        # self.selected_files = os.listdir(self.pdf_dir)
 
     def download_leaflets(self, pdf_dir: str) -> None:
         """
@@ -52,12 +53,15 @@ class LeafletReader:
         if not overwrite_images:
             reader = PdfReader(pdf_path)
             png_files = glob.glob(f"{output_dir}/*.png")
-            if len(reader.pages) == len(png_files):
-                print(f"Found as many PNG images as pages in {pdf_path}. Skipping conversion to images.")
-                return png_files
-            elif len(png_files) > len(reader.pages):
-                print(f"Warning: Found more PNG images than pages in {pdf_path}. Seems like an error.  But, skipping conversion to images.")
-                return png_files
+
+
+            expected_image_names = set([f"{i+1}.png" for i in range(len(reader.pages))])
+            if len(expected_image_names - set(png_files)) == 0:
+                print(f"Found PNG images for {pdf_path}. Skipping conversion from PDF to images.")
+                return natsorted(png_files)
+
+        os.makedirs(output_dir, exist_ok=True)
+
         images = convert_from_path(pdf_path)
         paths = []
 
@@ -65,4 +69,5 @@ class LeafletReader:
             output_filename = os.path.join(output_dir, f"{i+1}.png")
             image.save(output_filename, format='PNG')
             paths.append(output_filename)
-        return paths
+
+        return natsorted(paths)

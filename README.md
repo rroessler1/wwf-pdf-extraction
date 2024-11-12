@@ -36,3 +36,9 @@ The Leaflet Product Extractor is a Python-based application designed to extract 
 ├──  main_pipeline.py # Orchestrates the entire \extraction process \
 ├── requirements.txt # Dependencies \
 ├── README.md # Project documentation\
+
+
+
+# Run UI
+
+streamlit run ui_app.py

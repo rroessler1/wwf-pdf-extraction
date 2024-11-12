@@ -6,7 +6,7 @@ from categorization.categorization_system_prompt import CATEGORIZATION_SYSTEM_PR
 from categorization.categorization_user_prompt import CATEGORIZATION_USER_PROMPT
 from leaflet_processing.constants import OPENAI_PROMPT
 from .models import Results, CategorizationResult
-
+from typing import List
 
 class OpenAIClient:
     def __init__(self, api_key: str):
@@ -55,7 +55,7 @@ class OpenAIClient:
         # Extract and parse the response
         return response.choices[0].message.parsed
 
-    def categorize_products(self, products: list[str]) -> CategorizationResult:
+    def categorize_products(self, products: List[str]) -> CategorizationResult:
         """
         Sends prompt to OpenAI to get product categorization for products
         :param products: product data
@@ -82,5 +82,5 @@ class OpenAIClient:
         return response.choices[0].message.parsed
 
     @staticmethod
-    def build_product_categorization_prompt(products: list[str]) -> str:
+    def build_product_categorization_prompt(products: List[str]) -> str:
         return CATEGORIZATION_USER_PROMPT + "\n".join(products)
