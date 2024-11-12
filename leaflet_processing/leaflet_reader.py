@@ -7,7 +7,7 @@ from pdf2image import convert_from_path
 import gdown
 
 class LeafletReader:
-    def __init__(self, pdf_dir: str, download_url: str):
+    def __init__(self, pdf_dir: str, download_url: str, do_download=True):
         """
         Initializes the LeafletReader with the directory for PDFs and download URL.
 
@@ -17,6 +17,12 @@ class LeafletReader:
         """
         self.pdf_dir = pdf_dir
         self.download_url = download_url
+        
+        if do_download:
+            self.download_leaflet()
+            
+        self.all_files = os.listdir(self.pdf_dir)
+        self.selected_files = os.listdir(self.pdf_dir)
 
     def download_leaflet(self) -> None:
         """
@@ -54,11 +60,11 @@ class LeafletReader:
         Returns:
             List[tuple(str, List[io.BytesIO])]: List of (file name, images) for each PDF.
         """
-        if do_download:
-            self.download_leaflet()
+        # if do_download:
+        #     self.download_leaflet()
         all_images = []
 
-        for filename in os.listdir(self.pdf_dir):
+        for filename in self.selected_files:
             if filename.endswith(".pdf"):
                 pdf_path = os.path.join(self.pdf_dir, filename)
                 print(f"Processing {filename}...")
