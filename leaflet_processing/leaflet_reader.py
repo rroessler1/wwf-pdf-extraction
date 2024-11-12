@@ -51,6 +51,7 @@ class LeafletReader:
                 print(f"Warning: Found more PNG images than pages in {pdf_path}. Seems like an error.  But, skipping conversion to images.")
                 return png_files
 
+        os.makedirs(output_dir, exist_ok=True)
         images = convert_from_path(pdf_path)
         paths = []
 
