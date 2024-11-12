@@ -5,9 +5,9 @@ import pandas as pd
 from categorization.product_categorizer import ProductCategorizer
 from datetime import datetime
 from leaflet_processing.leaflet_reader import LeafletReader
+from natsort import natsorted
 from openai_integration.openai_client import OpenAIClient
 from result_handling.result_saver import ResultSaver
-from typing import List
 
 
 PDF_DIR = "pdf-files"
@@ -30,13 +30,13 @@ def main():
     result_saver = ResultSaver()
     categorizer = ProductCategorizer()
 
-    # Next Steps:
-    # Misc images should be in their own folder
-    # Check PDF length, don't process if we already have all the images
-    # Don't process if we already have the results
-
     if DO_DOWNLOAD:
         leaflet_reader.download_leaflets(PDF_DIR)
+
+    if result_saver.results_exist(PDF_DIR):
+        print(f"Already found a results file: [{os.path.join(PDF_DIR, result_saver.output_file_name)}], nothing to do.")
+        print("If you'd like new results, delete or rename the results file and rerun the script.")
+        return
 
     for filename in os.listdir(PDF_DIR):
         if filename.endswith(".pdf"):
@@ -53,12 +53,16 @@ def main():
     for directory in all_directories:
             process_directory(directory, directory, openai_client, categorizer, result_saver)
 
+    combined_results = result_saver.combine_results_from_all_subdirectories(PDF_DIR)
+    combined_results_filename = result_saver.save(combined_results, PDF_DIR)
+    print(f"Combined results from all files in {PDF_DIR} saved at: {combined_results_filename}")
+
 
 def get_all_image_paths(directory: str):
     paths = []
     for ext in ["png", "PNG", "jpg", "jpeg", "JPG", "JPEG"]:
         paths.extend(glob.glob(f"{directory}/*.{ext}"))
-    return paths
+    return natsorted(paths)
 
 
 def process_directory(directory: str, output_dir: str, openai_client, categorizer, result_saver):

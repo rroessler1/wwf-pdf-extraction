@@ -1,3 +1,4 @@
+import glob
 import pandas as pd
 import os
 
@@ -29,3 +30,7 @@ class ResultSaver:
         csv_file_path = os.path.join(output_dir, "results.csv")
         categorized_df.to_csv(csv_file_path, index=False)
         return excel_file_path
+
+    def combine_results_from_all_subdirectories(self, parent_directory: str) -> pd.DataFrame:
+        all_results_files = glob.glob(f"{parent_directory}/**/{self.output_file_name}", recursive=True)
+        return pd.concat([pd.read_excel(file) for file in all_results_files], ignore_index=True)
