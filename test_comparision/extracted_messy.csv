@@ -1,0 +1,11 @@
+product_name,original_price,discount_price,percentage_discount,discount_details,pdf_name,page_number,Category,date_collected,calendar_week
+ROLLSCHINKEN,1.59,1.19,25.0,pro 100 g,aldi.pdf,1,Kein Grillprodukt,2024-11-10,45
+TOASTBROT,2.39,,25.0,pro 100 g,aldi.pdf,1,Kein Grillprodukt,2024-11-10,45
+MILCH,1.29,1.05,18.6,pro 100 g,aldi.pdf,1,Kein Grillprodukt,2024-11-10,45
+PAPIER,0.99,0.89,10.1,pro 100 g,aldi.pdf,1,Kein Grillprodukt,2024-11-10,45
+WASSER,0.49,0.35,28.6,pro 100 g,aldi.pdf,1,Kein Grillprodukt,2024-11-10,45
+PASTA,1.59,1.49,6.3,pro 100 g,aldi.pdf,1,Kein Grillprodukt,2024-11-10,45
+POMMES,1.99,1.89,5.0,pro 100 g,aldi.pdf,1,Kein Grillprodukt,2024-11-10,45
+SPAGHETTI,0.99,0.89,9.0,pro 100 g,aldi.pdf,1,Kein Grillprodukt,2024-11-10,45  # Changed percentage_discount
+OBST,3.49,2.99,15.0,pro 100 g,aldi.pdf,1,Kein Grillprodukt,2024-11-10,45  # Changed discount_price
+HAMBURGER,4.99,4.19,20.0,pro 100 g,aldi.pdf,1,Kein Grillprodukt,2024-11-10,45  # Changed discount_price

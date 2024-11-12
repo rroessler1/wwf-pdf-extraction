@@ -1,0 +1,6 @@
+product_name,original_price_ground_truth,original_price_extracted,discount_price_ground_truth,discount_price_extracted,percentage_discount_ground_truth,percentage_discount_extracted,Category_ground_truth,Category_extracted,error_type
+ROLLSCHINKEN,,,,,,25.0,,,Redundant percentage_discount
+TOASTBROT,,,1.79,,,,,,Missing discount_price
+SPAGHETTI,,,,,10.1,9.0,,,Wrong percentage_discount
+OBST,,,,,14.3,15.0,,,Wrong percentage_discount
+HAMBURGER,,,3.99,4.19,,,,,Wrong discount_price
