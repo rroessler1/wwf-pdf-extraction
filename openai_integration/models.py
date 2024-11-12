@@ -31,6 +31,7 @@ class Results(BaseModel):
     all_products: List[GroceryProduct]
 
 class ProductCategory(Enum):
+    # TODO: I think ChatGPT can only see the Enum names, so I think we should make them German.  At least, we should test.
     MEAT_CHICKEN = "Grillfleisch (Geflügel)"
     MEAT_PORK = "Grillfleisch (Schwein)"
     MEAT_BEEF = "Grillfleisch (Rind)"

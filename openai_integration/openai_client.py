@@ -1,6 +1,5 @@
 import base64
 
-import pandas as pd
 from openai import OpenAI
 
 from categorization.categorization_system_prompt import CATEGORIZATION_SYSTEM_PROMPT
@@ -85,4 +84,3 @@ class OpenAIClient:
     @staticmethod
     def build_product_categorization_prompt(products: list[str]) -> str:
         return CATEGORIZATION_USER_PROMPT + "\n".join(products)
-        prompt += "\n".join(products['product_name'].str.replace('\n', ' ', regex=True))

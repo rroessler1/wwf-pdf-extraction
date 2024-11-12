@@ -1,69 +1,62 @@
 # leaflet_processing/leaflet_reader.py
 
+import gdown
+import glob
 import os
-import io
+
 from typing import List
 from pdf2image import convert_from_path
-import gdown
+from PyPDF2 import PdfReader
+
 
 class LeafletReader:
-    def __init__(self, pdf_dir: str, download_url: str):
+    def __init__(self, download_url: str):
         """
         Initializes the LeafletReader with the directory for PDFs and download URL.
 
         Parameters:
-            pdf_dir (str): Directory to save downloaded PDFs.
             download_url (str): URL of the leaflet folder to download.
         """
-        self.pdf_dir = pdf_dir
         self.download_url = download_url
 
-    def download_leaflet(self) -> None:
+    def download_leaflets(self, pdf_dir: str) -> None:
         """
         Downloads the PDF leaflets from the specified URL and saves them in pdf_dir.
         """
-        os.makedirs(self.pdf_dir, exist_ok=True)
-        gdown.download_folder(self.download_url, output=self.pdf_dir)
+        # TODO: this should check for duplicates and not re-download them
+        # but no need to do it now as we probably won't use Google Drive for the final solution
+        os.makedirs(pdf_dir, exist_ok=True)
+        gdown.download_folder(self.download_url, output=pdf_dir)
         print("Leaflets downloaded successfully.")
 
-    def split_pdf_to_images(self, pdf_path: str) -> List[io.BytesIO]:
+    def convert_pdf_to_images(self, pdf_path: str, output_dir: str, overwrite_images = False) -> List[str]:
         """
         Splits a PDF into individual images.
 
         Parameters:
             pdf_path (str): Path to the PDF file.
+            output_dir (str): Path to where the images will be written.
+            overwrite_images (bool): If False, skips the conversion to images, if enough images are found.
 
         Returns:
-            List[io.BytesIO]: List of images in BytesIO format.
+            List[str]: List of image paths.
         """
+        if not overwrite_images:
+            reader = PdfReader(pdf_path)
+            png_files = glob.glob(f"{output_dir}/*.png")
+            if len(reader.pages) == len(png_files):
+                print(f"Found as many PNG images as pages in {pdf_path}. Skipping conversion to images.")
+                return png_files
+            elif len(png_files) > len(reader.pages):
+                print(f"Warning: Found more PNG images than pages in {pdf_path}. Seems like an error.  But, skipping conversion to images.")
+                return png_files
+
         images = convert_from_path(pdf_path)
-        image_bytes = []
+        paths = []
 
-        for image in images:
-            img_byte_arr = io.BytesIO()
-            image.save(img_byte_arr, format='PNG')
-            img_byte_arr.seek(0)
-            image_bytes.append(img_byte_arr)
+        for i, image in enumerate(images):
+            output_filename = os.path.join(output_dir, f"{i+1}.png")
+            image.save(output_filename, format='PNG')
+            paths.append(output_filename)
 
-        return image_bytes
-
-    def process_leaflets(self, do_download=True) -> List[List[io.BytesIO]]:
-        """
-        Downloads leaflets and converts each PDF into images.
-
-        Returns:
-            List[tuple(str, List[io.BytesIO])]: List of (file name, images) for each PDF.
-        """
-        if do_download:
-            self.download_leaflet()
-        all_images = []
-
-        for filename in os.listdir(self.pdf_dir):
-            if filename.endswith(".pdf"):
-                pdf_path = os.path.join(self.pdf_dir, filename)
-                print(f"Processing {filename}...")
-                pdf_images = self.split_pdf_to_images(pdf_path)
-                all_images.append((os.path.basename(filename), pdf_images))
-                print(f"{filename} converted to images.")
-
-        return all_images
+        return paths
