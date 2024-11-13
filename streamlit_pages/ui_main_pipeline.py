@@ -11,8 +11,8 @@ from openai_integration.openai_client import OpenAIClient
 from result_handling.result_saver import ResultSaver
 
 # Constants
-PDF_DIR = "pdf-files"
-API_KEY_PATH = "openai_api_key.txt"
+PDF_DIR = "../pdf-files"
+API_KEY_PATH = "../openai_api_key.txt"
 URL = "https://drive.google.com/drive/folders/1AR2_592V_x4EF97FHv4UPN5zdLTXpVB3"
 
 st.markdown("""
