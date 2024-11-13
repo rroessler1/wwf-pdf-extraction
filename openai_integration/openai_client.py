@@ -1,9 +1,12 @@
 import base64
 
+import pandas as pd
 from openai import OpenAI
 
 from categorization.categorization_system_prompt import CATEGORIZATION_SYSTEM_PROMPT
 from categorization.categorization_user_prompt import CATEGORIZATION_USER_PROMPT
+from confirmation.verification_system_prompt import VERIFICATION_SYSTEM_PROMPT
+from confirmation.verification_user_prompt import VERIFICATION_USER_PROMPT
 from leaflet_processing.constants import OPENAI_PROMPT
 from .models import Results, CategorizationResult
 from typing import List
@@ -84,3 +87,38 @@ class OpenAIClient:
     @staticmethod
     def build_product_categorization_prompt(products: List[str]) -> str:
         return CATEGORIZATION_USER_PROMPT + "\n".join(products)
+
+    @staticmethod
+    def build_product_data_validation_prompt(products: Results) -> str:
+        return VERIFICATION_USER_PROMPT + "\n" + products.__str__()
+
+    def validate_product_data(self, products: Results, image: bytes) -> Results:
+        encoded_image = self._encode_image(image)
+        response = self.client.beta.chat.completions.parse(
+            model="gpt-4o-mini",
+            messages=[
+                {
+                    "role": "system",
+                    "content": VERIFICATION_SYSTEM_PROMPT
+                },
+                {
+                    "role": "user",
+                    "content": [
+                        {
+                            "type": "text",
+                            "text": self.build_product_data_validation_prompt(products),
+                        },
+                        {
+                            "type": "image_url",
+                            "image_url": {
+                                "url": f"data:image/png;base64,{encoded_image}"
+                            },
+                        },
+                    ],
+                }
+            ],
+            response_format=Results,
+        )
+
+        # Extract and parse the response
+        return response.choices[0].message.parsed

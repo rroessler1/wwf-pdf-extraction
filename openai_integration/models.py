@@ -21,6 +21,9 @@ class GroceryProduct(BaseModel):
     percentage_discount: Optional[float] = None
     discount_details: Optional[str] = None
 
+    def __str__(self) -> str:
+        return f"{self.product_name}, {self.original_price}, {self.discount_price}, {self.percentage_discount}"
+
 class Results(BaseModel):
     """
     Model for storing all extracted grocery products from the leaflet.
@@ -29,6 +32,14 @@ class Results(BaseModel):
         all_products (List[GroceryProduct]): List of extracted products.
     """
     all_products: List[GroceryProduct]
+
+    def __str__(self) -> str:
+        output = "product_name, original_price, discount_price, percentage_discount"
+        for product in self.all_products:
+            output = output + "\n" + product.__str__()
+
+        return output
+
 
 class ProductCategory(Enum):
     # TODO: I think ChatGPT can only see the Enum names, so I think we should make them German.  At least, we should test.

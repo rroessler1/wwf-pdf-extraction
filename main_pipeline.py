@@ -6,6 +6,8 @@ from categorization.product_categorizer import ProductCategorizer
 from datetime import datetime
 from leaflet_processing.leaflet_reader import LeafletReader
 from natsort import natsorted
+
+from openai_integration.models import Results
 from openai_integration.openai_client import OpenAIClient
 from result_handling.result_saver import ResultSaver
 
@@ -63,8 +65,9 @@ def main():
 
 def get_all_image_paths(directory: str):
     paths = []
-    for ext in ["png", "PNG", "jpg", "jpeg", "JPG", "JPEG"]:
-        paths.extend(glob.glob(f"{directory}/*.{ext}"))
+    for file in os.listdir(directory):
+        if file.lower().endswith(('.png', '.jpg', '.jpeg')):
+            paths.append(os.path.join(directory, file))
     return natsorted(paths)
 
 
@@ -75,11 +78,26 @@ def process_directory(directory: str, output_dir: str, openai_client, categorize
 
     image_paths = get_all_image_paths(directory)
     all_products = []
+
+    number_of_validations = 2
+    all_validation_results = [[] for i in range(number_of_validations)]
     # Call LLMs for all images for one PDF at a time
     for image_path in image_paths:
         with open(image_path, "rb") as image_file:
             print(f"Extracting data from {image_path}")
             response = openai_client.extract(image_file.read())
+
+            # Validate each extracted product from the response
+            for i in range(2): # Number of Checkings
+                # Validate the product data
+                image_file.seek(0)  # Reset file pointer to beginning for reuse
+                validation_response = openai_client.validate_product_data(response, image_file.read())
+
+                # Append the validation result to the validation_results list
+                if validation_response:
+                    all_validation_results[i].append(validation_response)
+
+
             for product in response.all_products:
                 product_as_dict = product.model_dump()
                 # TODO: might need a better way to identify this than just folder
@@ -88,20 +106,27 @@ def process_directory(directory: str, output_dir: str, openai_client, categorize
                 product_as_dict['page_number'] = os.path.basename(image_path)
                 all_products.append(product_as_dict)
 
-    # Convert all_products to DataFrame for categorization
-    if all_products:
-        product_df = pd.DataFrame(all_products)
+    # Create a DataFrame for extracted results
+    extracted_df = pd.DataFrame(all_products)
+    extracted_df = extracted_df.add_prefix('extracted_')  # Prefix columns with 'extracted_'
 
-        # Categorize products
-        print(f"Categorizing products for {directory}")
-        categorized_df = categorizer.categorize_products(None, product_df, openai_client)
-        append_metadata(categorized_df)
+    # Add validation results to the DataFrame
+    for i in range(number_of_validations):
+        for idx, validation_result in enumerate(all_validation_results[i]):
+            validation_df = pd.DataFrame([product.model_dump() for product in validation_result.all_products])
+            validation_df = validation_df.add_prefix(f'validated{idx + 1}_')  # Prefix columns with 'validatedX_'
 
-        # Save categorized products to an Excel file
-        output_path = result_saver.save(categorized_df, output_dir)
-        print(f"Categorized results from {directory} saved at: {output_path}")
-    else:
-        print(f"No products found to save from {directory}.")
+            # Combine extracted data with validation data
+            extracted_df = pd.concat([extracted_df, validation_df], axis=1)
+
+    # Categorize products
+    print(f"Categorizing products for {directory}")
+    categorized_df = categorizer.categorize_products(extracted_df, openai_client)
+    append_metadata(categorized_df)
+
+    # Save categorized products to an Excel file
+    output_path = result_saver.save(categorized_df, output_dir)
+    print(f"Categorized results from {directory} saved at: {output_path}")
 
 
 if __name__ == "__main__":

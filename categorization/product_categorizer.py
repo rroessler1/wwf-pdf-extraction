@@ -13,7 +13,7 @@ class ProductCategorizer:
     def __init__(self):
         self.categorization_columns = []
 
-    def categorize_products(self, image: Image, data: pd.DataFrame, openai_client: OpenAIClient) -> pd.DataFrame:
+    def categorize_products(self, data: pd.DataFrame, openai_client: OpenAIClient) -> pd.DataFrame:
         """
         Categorizes products
         Parameters:
@@ -26,7 +26,7 @@ class ProductCategorizer:
         """
 
         product_categories: list[ProductCategory] = []
-        product_names = list(data['product_name'])
+        product_names = list(data['extracted_product_name'])
         step_size = 5
         for i in range(0, len(product_names), step_size):
             categorization_results = openai_client.categorize_products(product_names[i: i+step_size])
