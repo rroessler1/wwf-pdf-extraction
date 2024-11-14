@@ -150,7 +150,7 @@ def main():
         # Update the session state with selected files
         st.session_state.selected_files = selected_files
 
-        # Display selected files for confirmation (optional)
+        # Display selected files for validation (optional)
     st.write("Selected files:", st.session_state.selected_files)
 
     #################
@@ -218,7 +218,7 @@ def main():
     # Update the session state with selected files
     st.session_state.selected_categories = selected_categories
 
-    # Display selected files for confirmation (optional)
+    # Display selected files for validation (optional)
     st.write("Selected files:", st.session_state.selected_categories)
 
     ####################

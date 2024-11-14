@@ -46,7 +46,7 @@ def show_settings_page():
         save_settings(SETTINGS_PATH, settings)
         st.success("Settings saved successfully!")
 
-    # Restore default settings with confirmation
+    # Restore default settings with validation
     st.header("Restore Default Settings")
     restore_default_checkbox = st.checkbox("Confirm that you want to restore the default settings")
 

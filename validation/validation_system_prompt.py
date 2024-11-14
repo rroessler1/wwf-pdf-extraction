@@ -1,4 +1,4 @@
-VERIFICATION_SYSTEM_PROMPT = """
+VALIDATION_SYSTEM_PROMPT = """
 
 You are a Senior Quality Assurance Officer specialized on grocery products. 
 

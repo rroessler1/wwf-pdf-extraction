@@ -5,8 +5,8 @@ from openai import OpenAI
 
 from categorization.categorization_system_prompt import CATEGORIZATION_SYSTEM_PROMPT
 from categorization.categorization_user_prompt import CATEGORIZATION_USER_PROMPT
-from confirmation.verification_system_prompt import VERIFICATION_SYSTEM_PROMPT
-from confirmation.verification_user_prompt import VERIFICATION_USER_PROMPT
+from validation.validation_system_prompt import VERIFICATION_SYSTEM_PROMPT
+from validation.validation_user_prompt import VERIFICATION_USER_PROMPT
 from leaflet_processing.constants import OPENAI_PROMPT
 from .models import Results, CategorizationResult
 from typing import List
