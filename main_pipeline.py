@@ -1,3 +1,4 @@
+import glob
 import os
 import pandas as pd
 
@@ -11,12 +12,13 @@ from openai_integration.openai_client import OpenAIClient
 from result_handling.result_saver import ResultSaver
 from openai_integration.mock_client import MockLLM
 
+from settings.settings import NUMBER_OF_CHATGPT_VALIDATIONS
+from validation.validation_comparison import compare_validation
 
 PDF_DIR = "pdf-files"
 API_KEY_PATH = "openai_api_key.txt"
 URL = "https://drive.google.com/drive/folders/1AR2_592V_x4EF97FHv4UPN5zdLTXpVB3"
 DO_DOWNLOAD = False # just used for testing, saves time
-NUM_VALIDATIONS = 2
 USE_TEST_LLM_CLIENT = False
 
 def load_api_key(api_key_path: str) -> str:
@@ -81,7 +83,8 @@ def process_directory(directory: str, output_dir: str, openai_client, categorize
     image_paths = get_all_image_paths(directory)
     all_products = []
 
-    all_validation_results = [[] for _ in range(NUM_VALIDATIONS)]
+
+    all_validation_results = [[] for i in range(NUMBER_OF_CHATGPT_VALIDATIONS)]
     # Call LLMs for all images for one PDF at a time
     for image_path in image_paths:
         with open(image_path, "rb") as image_file:
@@ -89,7 +92,7 @@ def process_directory(directory: str, output_dir: str, openai_client, categorize
             response = openai_client.extract(image_file.read())
 
             # Validate each extracted product from the response
-            for i in range(NUM_VALIDATIONS):
+            for i in range(NUMBER_OF_CHATGPT_VALIDATIONS): # Number of Checkings
                 # Validate the product data
                 image_file.seek(0)  # Reset file pointer to beginning for reuse
                 validation_response = openai_client.validate_product_data(response, image_file.read())
@@ -114,12 +117,14 @@ def process_directory(directory: str, output_dir: str, openai_client, categorize
     extracted_df = extracted_df.add_prefix('extracted_')  # Prefix columns with 'extracted_'
 
     # Add validation results to the DataFrame
-    for i in range(NUM_VALIDATIONS):
+    for i in range(NUMBER_OF_CHATGPT_VALIDATIONS):
         validation_df = pd.DataFrame(all_validation_results[i])
         validation_df = validation_df.add_prefix(f'validated{i + 1}_')  # Prefix columns with 'validatedX_'
 
         # Combine extracted data with validation data
         extracted_df = pd.concat([extracted_df, validation_df], axis=1)
+
+    compare_validation(extracted_df)
 
     # Categorize products
     print(f"Categorizing products for {directory}")
