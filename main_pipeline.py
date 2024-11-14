@@ -95,7 +95,9 @@ def process_directory(directory: str, output_dir: str, openai_client, categorize
 
                 # Append the validation result to the validation_results list
                 if validation_response:
-                    all_validation_results[i].append(validation_response)
+                    for validation in validation_response.all_products:
+                        validation_as_dict = validation.model_dump()
+                        all_validation_results[i].append(validation_as_dict)
 
 
             for product in response.all_products:
@@ -112,12 +114,11 @@ def process_directory(directory: str, output_dir: str, openai_client, categorize
 
     # Add validation results to the DataFrame
     for i in range(number_of_validations):
-        for idx, validation_result in enumerate(all_validation_results[i]):
-            validation_df = pd.DataFrame([product.model_dump() for product in validation_result.all_products])
-            validation_df = validation_df.add_prefix(f'validated{idx + 1}_')  # Prefix columns with 'validatedX_'
+        validation_df = pd.DataFrame(all_validation_results[i])
+        validation_df = validation_df.add_prefix(f'validated{i + 1}_')  # Prefix columns with 'validatedX_'
 
-            # Combine extracted data with validation data
-            extracted_df = pd.concat([extracted_df, validation_df], axis=1)
+        # Combine extracted data with validation data
+        extracted_df = pd.concat([extracted_df, validation_df], axis=1)
 
     # Categorize products
     print(f"Categorizing products for {directory}")
