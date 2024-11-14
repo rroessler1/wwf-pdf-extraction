@@ -5,8 +5,8 @@ from openai import OpenAI
 
 from categorization.categorization_system_prompt import CATEGORIZATION_SYSTEM_PROMPT
 from categorization.categorization_user_prompt import CATEGORIZATION_USER_PROMPT
-from validation.validation_system_prompt import VERIFICATION_SYSTEM_PROMPT
-from validation.validation_user_prompt import VERIFICATION_USER_PROMPT
+from validation.validation_system_prompt import VALIDATION_SYSTEM_PROMPT
+from validation.validation_user_prompt import VALIDATION_USER_PROMPT
 from leaflet_processing.constants import OPENAI_PROMPT
 from .models import Results, CategorizationResult
 from typing import List
@@ -90,7 +90,7 @@ class OpenAIClient:
 
     @staticmethod
     def build_product_data_validation_prompt(products: Results) -> str:
-        return VERIFICATION_USER_PROMPT + "\n" + products.__str__()
+        return VALIDATION_USER_PROMPT + "\n" + products.__str__()
 
     def validate_product_data(self, products: Results, image: bytes) -> Results:
         encoded_image = self._encode_image(image)
@@ -99,7 +99,7 @@ class OpenAIClient:
             messages=[
                 {
                     "role": "system",
-                    "content": VERIFICATION_SYSTEM_PROMPT
+                    "content": VALIDATION_SYSTEM_PROMPT
                 },
                 {
                     "role": "user",
