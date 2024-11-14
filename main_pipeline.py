@@ -1,4 +1,3 @@
-import glob
 import os
 import pandas as pd
 
@@ -10,12 +9,15 @@ from natsort import natsorted
 from openai_integration.models import Results
 from openai_integration.openai_client import OpenAIClient
 from result_handling.result_saver import ResultSaver
+from openai_integration.mock_client import MockLLM
 
 
 PDF_DIR = "pdf-files"
 API_KEY_PATH = "openai_api_key.txt"
 URL = "https://drive.google.com/drive/folders/1AR2_592V_x4EF97FHv4UPN5zdLTXpVB3"
 DO_DOWNLOAD = False # just used for testing, saves time
+NUM_VALIDATIONS = 2
+USE_TEST_LLM_CLIENT = False
 
 def load_api_key(api_key_path: str) -> str:
     with open(api_key_path, 'r') as file:
@@ -31,7 +33,7 @@ def append_metadata(df: pd.DataFrame):
 def main():
     api_key = load_api_key(API_KEY_PATH)
     leaflet_reader = LeafletReader(download_url=URL)
-    openai_client = OpenAIClient(api_key=api_key)
+    openai_client = MockLLM() if USE_TEST_LLM_CLIENT else OpenAIClient(api_key=api_key)
     result_saver = ResultSaver()
     categorizer = ProductCategorizer()
 
@@ -79,8 +81,7 @@ def process_directory(directory: str, output_dir: str, openai_client, categorize
     image_paths = get_all_image_paths(directory)
     all_products = []
 
-    number_of_validations = 2
-    all_validation_results = [[] for i in range(number_of_validations)]
+    all_validation_results = [[] for _ in range(NUM_VALIDATIONS)]
     # Call LLMs for all images for one PDF at a time
     for image_path in image_paths:
         with open(image_path, "rb") as image_file:
@@ -88,7 +89,7 @@ def process_directory(directory: str, output_dir: str, openai_client, categorize
             response = openai_client.extract(image_file.read())
 
             # Validate each extracted product from the response
-            for i in range(2): # Number of Checkings
+            for i in range(NUM_VALIDATIONS):
                 # Validate the product data
                 image_file.seek(0)  # Reset file pointer to beginning for reuse
                 validation_response = openai_client.validate_product_data(response, image_file.read())
@@ -113,7 +114,7 @@ def process_directory(directory: str, output_dir: str, openai_client, categorize
     extracted_df = extracted_df.add_prefix('extracted_')  # Prefix columns with 'extracted_'
 
     # Add validation results to the DataFrame
-    for i in range(number_of_validations):
+    for i in range(NUM_VALIDATIONS):
         validation_df = pd.DataFrame(all_validation_results[i])
         validation_df = validation_df.add_prefix(f'validated{i + 1}_')  # Prefix columns with 'validatedX_'
 
