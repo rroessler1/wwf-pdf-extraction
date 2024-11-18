@@ -1,0 +1,295 @@
+product_name,original_price,discount_price,percentage_discount,discounted_time,supermarket,category,discount_interval
+Coop Poulet,9.95,5.95,40.201005025125625,22.4-29.4,Coop,Geflügel,17.0
+SCHWEIN SPARE RIBS,2.49,1.7,31.72690763052209,27.04-3.5,Aldi,Schwein,17.0
+SCHWEINSHACKFLEISCH,,8.0,0.0,27.04-3.5,Aldi,Schwein,17.0
+Coop Naturafarm Natura-Beef Rindsclubsteak,5.7,4.5,21.05263157894737,22.4-29.4,Coop,Rind,17.0
+Diverse Fleischspiessli,5.0,3.9,22.0,22.4-29.4,Coop,Gemischt,17.0
+BBQ Schweinssteaks vom Hals gewürzt,,9.99,0.0,11.5-16.5,Aldi,Schwein,19.0
+Coop Rindshackfleisch Schweiz,17.6,9.95,43.46590909090911,22.4-29.4,Coop,Rind,17.0
+"Bell Pouletbrust, gewürzt",3.55,2.8,21.126760563380287,22.4-29.4,Coop,Geflügel,17.0
+Bell Kalbs-Salsiccia,13.0,9.95,23.461538461538467,22.4-29.4,Coop,Rind,17.0
+St. Galler Kalbsbratwurst 3x2 Stück,16.5,11.95,27.575757575757574,22.4-29.4,Coop,Gemischt,17.0
+Green Mountain Produkte ,8.95,7.15,20.111731843575413,22.4-29.4,Coop,Ersatzprodukt,17.0
+Yolo Grillwürste,4.5,3.6,20.0,22.4-29.4,Coop,Ersatzprodukt,17.0
+Bell Rindshohrückensteak,6.4,4.45,30.46875,22.4-29.4,Coop,Rind,17.0
+SCHWEINSHUFTSTEAK,,6.99,0.0,11.5-16.5,Aldi,Schwein,19.0
+Coop Naturafarm Pouletteileplatte,2.25,1.55,31.111111111111114,22.4-29.4,Coop,Geflügel,17.0
+Bell Rindssteak runder Mocken,5.0,3.5,30.0,22.4-29.4,Coop,Rind,17.0
+BBQ Schwein Costine Royal,1.99,1.2,39.69849246231156,11.5-13.5,Aldi,Schwein,19.0
+Coop St. Galler Kalbsbratwurst,16.5,11.95,27.575757575757574,22.4-29.4,Coop,Rind,17.0
+BBQ Schweinssteaks vom Hals gewürzt,,6.79,0.0,17.5-24-5,Aldi,Schwein,20.0
+Green Mountain Spiesse ,6.95,5.55,20.143884892086334,22.4-29.4,Coop,Ersatzprodukt,17.0
+BBQ Schweinshohrückensteak,,5.99,0.0,17.5-24-5,Aldi,Schwein,20.0
+Bell Barbecue Fisch-Grillplatte ASC,4.95,4.95,0.0,22.4-29.4,Coop,Fisch & Meeresfrüchte,17.0
+Nauraplan Bio-Lachs-Crevettenspiess,6.95,6.95,0.0,22.4-29.4,Coop,Fisch & Meeresfrüchte,17.0
+Bell Barbecue Crevettenspiess ASC,6.5,6.5,0.0,22.4-29.4,Coop,Fisch & Meeresfrüchte,17.0
+BBQ Schwein Spare Ribs,,2.49,0.0,17.5-24-5,Aldi,Schwein,20.0
+RINDSFILET BLACK ANGUS,,40.0,0.0,27.04-3.5,Aldi,Rind,17.0
+BBQ Schwein Costine Royal,,1.99,0.0,17.5-24-5,Aldi,Schwein,20.0
+RINDS-ENTRECÔTE BLACK ANGUS,,24.0,0.0,27.04-3.5,Aldi,Rind,17.0
+Poulet Grillfackeln,9.49,6.0,36.77555321390938,27.04.-29.04.,Aldi,Geflügel,17.0
+Pouletschenkel,8.36,4.99,40.31100478468899,27.4-29.4,Lidl,Geflügel,17.0
+BBQ Schweinsfiletspiess mit Speck,,4.99,0.0,17.5-24-5,Aldi,Schwein,20.0
+Rinds Entrecôte​,,3.49,0.0,27.4-29-4,Lidl,Rind,17.0
+Tessiner Grillwurst XXL​,8.0,6.29,21.375,27.4-29-4,Lidl,Geflügel,17.0
+Lamm-Nierstück Premium​,4.29,3.29,23.31002331002331,28.4 und 29.4,Lidl,Lamm,17.0
+BBQ Schweinssteaks vom Hals,9.99,6.0,39.93993993993994,17.5-20-5,Aldi,Schwein,20.0
+Rindshuft am Stück​,,2.99,0.0,1.5-3.5,Lidl,Rind,17.0
+Kalbs-Saltimbocca​,,7.99,0.0,1.5-3.5,Lidl,Rind,17.0
+Coop Naturafarm Schweinskoteletts,2.4,1.4,41.66666666666666,22.4-29.4,Coop,Schwein,17.0
+Bell Spareribs gegart,3.5,2.8,20.0,22.4-29.4,Coop,Schwein,17.0
+Denner Rindsentrecôte,23.96,15.96,33.388981636060095,25.4-1.5,Denner,Rind,17.0
+Denner St. Galler Kalbsbratwurst IGP,10.15,7.95,21.674876847290637,25.4-1.5,Denner,Gemischt,17.0
+Denner Poulet-Mini-Filet,11.0,7.95,27.72727272727272,25.4-1.5,Denner,Geflügel,17.0
+Greco Bio-Halloumi Grillkäse Basilikum,3.95,2.95,25.31645569620254,25.4-1.5,Denner,Käse,17.0
+Greco Bio Halloumi Grillkäse,3.95,2.95,25.31645569620254,25.4-1.5,Denner,Käse,17.0
+Rindsfilet Australian Outback Beef,9.99,4.99,50.05005005005005,28.04.-29.04.,Denner,Rind,17.0
+Coop Naturaplan Bio-Schweinshuftsteak,3.7,2.95,20.270270270270277,22.4-29.4,Coop,Schwein,17.0
+Coop Schweinsfilet,5.6,2.8,50.0,22.4-29.4,Coop,Schwein,17.0
+Optigal · Poulet Ober- und Unterschenkel,14.5,8.8,39.3103448275862,25.4-1.5,Migros,Geflügel,17.0
+"Cornatur Quorn · Pfeffer Grill Steak · durchgegart, auf Basis von Quorn, Pilzproduckt, zum Erhitztessen",9.9,7.9,20.202020202020197,25.4-1.5,Migros,Ersatzprodukt,17.0
+"Cornatur Quorn · Zitronenpfeffer Schnitzel · paniert, vorfrittiert, durchgegart, auf Basis von Quorn, Pilzprodukt, zum Erhiztessen",9.9,7.9,20.202020202020197,25.4-1.5,Migros,Ersatzprodukt,17.0
+IP-SUISSE · Rindshuftsteak · mariniert,7.8,5.3,32.051282051282044,25.4-30.4,Migros,Rind,17.0
+Alle Baer Grillkäse,6.8,5.45,19.85294117647058,25.4-1.5,Migros,Käse,17.0
+M-Classic Pouletschnitzel,2.4,1.65,31.25,25.4-1.6,Migros,Geflügel,
+Trutengeschnetzeltes,16.75,13.0,22.388059701492537,25.4-1.7,Migros,Geflügel,
+Bell Schweins Grill-Spiess,3.5,2.45,30.0,22.4-29.4,Coop,Schwein,17.0
+Coop Naturaplan Bio-Cervelas,3.95,3.95,0.0,22.4-29.4,Coop,Schwein,17.0
+Bio Schweins-Huftsteak mariniert,3.7,2.95,20.270270270270277,22.4-29.4,Coop,Schwein,17.0
+Bell Schweins Eckstücksteak Pfeffer 600g,14.05,8.3,40.92526690391459,1.5-7.5,Coop,Schwein,18.0
+Beyond Burger 2x 226g,11.9,9.5,20.16806722689076,1.5-7.5,Coop,Ersatzprodukt,18.0
+Cervelats,11.5,7.95,30.869565217391298,1.5-7.5,Coop,Gemischt,18.0
+Rindshuftsteak Angus,26.6,17.3,34.9624060150376,1.5-7.5,Coop,Rind,18.0
+Craft Rind- und Schweinefleisch grillplatte,9.95,7.95,20.1005025125628,1.5-7.5,Coop,Gemischt,18.0
+Natura-Veal Naturafarm kalbsplätzli,9.2,7.3,20.65217391304347,1.5-7.5,Coop,Rind,18.0
+Poulebrust,2.65,1.55,41.50943396226416,1.5-7.5,Coop,Geflügel,18.0
+Pouletflügeli,1.55,1.15,25.80645161290323,1.5-7.5,Coop,Geflügel,18.0
+Bell Metzgerbratwurst,,5.0,0.0,,Coop,Gemischt,
+Schweinsfiletspiess Naturafarm,6.0,4.8,20.0,,Coop,Schwein,
+Naturplan Bio Schweins Hochrückensteak mariniert ca. 320g,17.5,8.5,51.42857142857143,1.5-7.5,Coop,Schwein,18.0
+Bell Poulet American Cut Zederenholz ca. 1kg,14.5,9.95,31.379310344827587,1.5-7.5,Coop,Geflügel,18.0
+Bell Pouletbrust Spiess Platte ca. 250g,9.85,6.85,30.456852791878177,1.5-7.5,Coop,Geflügel,18.0
+Naturafarm Schweinsteak Nierstück,3.95,2.7,31.64556962025317,1.5-7.5,Coop,Schwein,18.0
+Schweins Schulterbraten 1.2kg,22.8,15.6,31.57894736842105,1.5-7.5,Coop,Schwein,18.0
+Bell Rinds Farmersteak mariniert ca. 375g,5.6,3.9,30.357142857142847,1.5-7.5,Coop,Rind,18.0
+ASC Crevetten Spiessli Pfeffer Marinade,,6.5,0.0,,Coop,Fisch & Meeresfrüchte,
+Naturaplan Bio Lachs in knoblauch marinade,,6.25,0.0,,Coop,Fisch & Meeresfrüchte,
+Crevettenspiessli Natur,,7.95,0.0,,Coop,Fisch & Meeresfrüchte,
+Bio Tofu Skewer,,5.95,0.0,,Coop,Ersatzprodukt,
+green Mountain Teriyaki Spiess,,6.95,0.0,,Coop,Ersatzprodukt,
+Green Mountain BBQ Spiess,,6.95,0.0,,Coop,Ersatzprodukt,
+Green Mountain Paprika Steak,,8.95,0.0,,Coop,Ersatzprodukt,
+Bell Speckchipolataspiess,3.25,2.25,30.769230769230774,1.5-7.5,Coop,Gemischt,18.0
+Gazi Halloumi Grillkäse Natur 2x 250g,9.9,7.85,20.707070707070717,1.5-7.5,Coop,Käse,18.0
+"Bell Beefburger, gewürzt,",12.95,8.95,30.888030888030897,5.5-7.5,Coop,Rind,18.0
+Bell Naturfarm Schweins-Feierabendspiess 4 Stück ca. 480g,3.6,2.5,30.55555555555556,1.5-7.5,Coop,Schwein,18.0
+"Bell Barbecue Schweins-Spareribs, mariniert,",3.05,1.5,50.819672131147534,5.5-7.5,Coop,Schwein,18.0
+Grill mi Rinds BBQ Steak,6.9,4.1,40.57971014492755,2.5-8-5,Migros,Rind,18.0
+Grill mi Poulet Schenkelsteaks,1.7,1.7,0.0,2.5-8-5,Migros,Geflügel,18.0
+Bell Naturafarm Schweinshalssteak Cognac,11.95,6.95,41.84100418410041,9.5-14.5,Coop,Schwein,19.0
+Kebab Spiesse,6.9,6.9,0.0,2.5-8-5,Migros,Unbekannt,18.0
+Fakelspiesse mit Käse,2.75,2.75,0.0,2.5-8-5,Migros,Unbekannt,18.0
+Naturafarm Schweins Geschnetzeltes ca. 600g,2.45,1.65,32.653061224489804,9.5-14.5,Coop,Schwein,19.0
+M-Classic · Wienerli,11.0,7.95,27.72727272727272,2.5-8-5,Migros,Gemischt,18.0
+Optigal · Poulet Minifilets,3.6,3.1,13.888888888888886,2.5-8-5,Migros,Geflügel,18.0
+Optigal Pouletflügel Limited,16.0,9.6,40.0,2.5-8-5,Migros,Geflügel,18.0
+Kalbskoteletts,6.8,5.75,15.441176470588232,2.5-8-5,Migros,Rind,18.0
+GrillMi IP-SUISSE · Würstchen · Scharfe Chili,4.95,4.95,0.0,2.5-15.5,Migros,Gemischt,
+Bio Salsiccia,5.95,5.95,0.0,2.5-15.5,Migros,Unbekannt,
+Optigal · Poulet Minifilets · Tikka Masala,3.7,3.7,0.0,2.5-15.5,Migros,Geflügel,
+GrillMi IP-SUISSE · Bacon Burger,4.9,4.9,0.0,2.5-15.5,Migros,Gemischt,
+Bio Grill Mi Lachsfilet,6.3,6.3,0.0,2.5-8-5,Migros,Fisch & Meeresfrüchte,18.0
+Grill mi Duo Pulpo Tentakel,6.4,6.4,0.0,2.5-15.5,Migros,Fisch & Meeresfrüchte,
+Grill mi MSC Kabeljau Harissa,4.6,4.6,0.0,2.5-15.5,Migros,Fisch & Meeresfrüchte,
+GOURMET Rindshuft Black Angus,,24.0,0.0,4.5-10.5,Aldi,Rind,18.0
+COUNTRY'S BEST Poulet im Backbeutel,,7.0,0.0,4.5-10.5,Aldi,Geflügel,18.0
+COUNTRY'S BEST Tessinerbraten,,8.0,0.0,4.5-10.5,Aldi,Unbekannt,18.0
+COUNTRY'S BEST Poulet Schlegel,6.69,4.0,40.20926756352766,4.5-6.5,Aldi,Geflügel,18.0
+COUNTRY'S BEST Lammfilet,11.9,7.5,36.97478991596639,4.5-6.5,Aldi,Lamm,18.0
+Premium Rindshamburger,8.73,5.59,35.967926689576174,4.5-10.5,Lidl,Rind,18.0
+Rindsfilet am Stück,,4.99,0.0,5.5-6.5,Lidl,Rind,18.0
+Coop Naturafarm Schweinsnierstück,4.1,3.0,26.82926829268291,9.5-14.5,Coop,Schwein,19.0
+Pouletbrust XXL,2.33,1.45,37.76824034334765,4.5-6.5,Lidl,Geflügel,18.0
+Rindsentrecôte am Stück,,3.49,0.0,4.5-6.5,Lidl,Rind,18.0
+Grillschnecke Festival,,9.89,0.0,4.5-6.5,Lidl,Gemischt,18.0
+Bell Schweinsgrillspies ,3.5,1.75,50.0,12.5-14.5,Coop,Schwein,19.0
+Delikatess Wienerli,8.37,5.99,28.434886499402623,4.5-10.5,Lidl,Gemischt,18.0
+Poulet Minifilet Spiessli,6.99,4.99,28.61230329041487,5.5-6.5,Lidl,Geflügel,18.0
+Chili-Bauernbratwurst,,2.35,0.0,16.5-21.5,Coop,Schwein,20.0
+Premium Rindshamburger,8.73,5.59,35.967926689576174,8.5-10.5,Lidl,Rind,18.0
+Satayspiessli Soja-Honig,,4.99,0.0,8.5-10.5,Lidl,Unbekannt,18.0
+Steak Route 66,,9.99,0.0,8.5-10.5,Lidl,Rind,18.0
+Cevapcici vom Rind,5.79,4.45,23.143350604490493,8.5-10.5,Lidl,Rind,18.0
+Kräuter Grillschnecke,,2.95,0.0,16.5-21.5,Coop,Schwein,20.0
+Denner Rindshuftsteak,7.99,3.99,25.83333333333333,2.5-8.5,Denner,Rind,18.0
+Denner BBQ Truten-Filetspiessli,10.35,7.8,24.63768115942028,2.5-8.5,Denner,Geflügel,18.0
+Willimann Big Dagmerseller Griller,,7.9,0.0,16.5-21.5,Coop,Schwein,20.0
+Denner BBQ Grillschnecken-Mix,12.0,8.9,25.83333333333333,2.5-8.5,Denner,Gemischt,18.0
+Denner Geflügelbratwurst,9.9,6.9,30.303030303030297,2.5-8.5,Denner,Gemischt,18.0
+Denner BBQ Cipollata tricolore,11.4,8.95,21.491228070175453,2.5-8.5,Denner,Gemischt,18.0
+Denner BBQ Pouletschlegel,8.4,5.85,30.35714285714286,2.5-8.5,Denner,Geflügel,18.0
+Denner BBQ Poulet,9.9,5.5,44.44444444444444,5.5-6.5,Denner,Geflügel,18.0
+Denner Lammfilet,5.59,2.99,46.51162790697674,5.5-6.5,Denner,Lamm,18.0
+Suttero BBQ-Steak,3.55,2.45,30.985915492957744,3.5-6.5,Volg,Unbekannt,18.0
+Bell Waadtländer Grillschnecke 2x260g,15.5,11.95,22.903225806451616,9.5-14.5,Coop,Gemischt,19.0
+Schulthess Gold Kläpfer,,4.5,0.0,16.5-21.5,Coop,Schwein,20.0
+Lamm Racks ca. 400g,6.1,4.85,20.49180327868852,9.5-14.5,Coop,Lamm,19.0
+Poulet Spiessli Telly Cherry 5 Stück 235g,4.3,3.4,20.930232558139537,9.5-14.5,Coop,Geflügel,19.0
+Pouletminifilet ca. 500g,3.75,2.25,40.0,9.5-14.5,Coop,Geflügel,19.0
+Sandmeier Sandis Grill-Mix,,4.6,0.0,16.5-21.5,Coop,Schwein,20.0
+Pouletminifilet ca. 500g,3.75,2.25,40.0,9.5-14.5,Coop,Geflügel,19.0
+Bell Crevetten ASC spiess Pfeffer ca. 180g,6.95,5.95,14.38848920863309,9.5-14.5,Coop,Fisch & Meeresfrüchte,19.0
+Künzli Roschtbratwurst,,7.2,0.0,16.5-21.5,Coop,Schwein,20.0
+Coop Naturafarm Natura-beef Rindssiedfleisch,26.5,15.5,41.50943396226416,12.5-14.5,Coop,Rind,19.0
+Bell Naturafarm Schweins-Hohrücken Steak 600g,4.25,2.5,41.17647058823529,16.5-21.5,Coop,Schwein,20.0
+Coop Pouletschenkel,,5.0,0.0,9.5-15.5,Coop,Geflügel,
+Ragout de boeuf,3.4,2.7,20.58823529411764,9.5-15.5,Migros,Rind,19.0
+Rumsteck de boeuf,5.9,4.7,20.33898305084746,9.5-15.5,Migros,Rind,19.0
+Bell BBQ Schnecken Grillplatte,,9.95,0.0,16.5-21.5,Coop,Schwein,20.0
+Médaillons de Poulet Optigal,3.65,2.9,20.54794520547945,9.5-15.5,Migros,Geflügel,19.0
+Bell Bauernspiessli (Schwein),2.7,1.85,31.48148148148149,19.5-21.5,Coop,Schwein,20.0
+Optigal · Poulet · ganz,9.95,6.95,30.150753768844226,9.5-15.5,Migros,Geflügel,19.0
+Escalopes de Poulet Optigal,3.4,2.85,16.17647058823529,9.5-15.5,Migros,Geflügel,19.0
+Alle Grillkäse,4.85,4.15,14.432989690721628,9.5-15.5,Migros,Käse,19.0
+Heura Burger,5.95,5.95,0.0,9.5-15.5,Migros,Ersatzprodukt,19.0
+Peppery Steak Grill Mi,5.95,5.95,0.0,9.5-15.5,Migros,Ersatzprodukt,19.0
+Sausage Pizza Style ,4.5,4.5,0.0,9.5-15.5,Migros,Ersatzprodukt,19.0
+Sausage Spicy GrillMi,4.5,4.5,0.0,9.5-15.5,Migros,Ersatzprodukt,19.0
+Coop Schweinskrustenbraten,18.0,9.0,50.0,19.5-21.5,Coop,Schwein,20.0
+COUNTRY'S BEST Rindsschulterbraten,,2.0,0.0,11.5-16.5,Aldi,Rind,19.0
+COUNTRY'S BEST Lammkoteletts,,2.5,0.0,11.5-16.5,Aldi,Lamm,19.0
+COUNTRY'S BEST Party Flügeli in Grillschale,,0.5,0.0,11.5-16.5,Aldi,Geflügel,19.0
+BBQ Grillschnecke,4.99,3.49,30.06012024048096,11.5-16.5,Aldi,Gemischt,19.0
+ALPINA Original Berner Würstchen,5.95,4.15,30.252100840336126,11.5-16.5,Aldi,Gemischt,19.0
+ALPINA Cervelas,1.95,1.29,33.846153846153854,11.5-16.5,Aldi,Gemischt,19.0
+ALPINA Geflügelwienerli,2.89,1.99,31.141868512110733,11.5-16.5,Aldi,Gemischt,19.0
+Schweinsnierstück,17.91,12.95,27.694025683975426,25.4-1.5,Denner,Schwein,17.0
+BBQ Poulet Filetspitzen,,7.99,0.0,11.5-16.5,Aldi,Geflügel,19.0
+BBQ Pouletfiletspiessli,,7.99,0.0,11.5-16.5,Aldi,Geflügel,19.0
+Denner BBQ Spare Ribs,12.45,8.45,32.1285140562249,25.4-1.5,Denner,Schwein,17.0
+SAVEURS SUISSE Luganighe,,2.99,0.0,11.5-16.5,Aldi,Gemischt,19.0
+St. Galler Olma-Bratwurst/St. Gallerbratwurst,,3.59,0.0,11.5-16.5,Aldi,Gemischt,19.0
+DennerBBQ Schweinsteak,16.7,9.95,40.41916167664671,2.5-8.5,Denner,Schwein,18.0
+COUNTRY'S BEST Truten-Ministeaks,7.49,5.0,33.244325767690256,11.5-13.5,Aldi,Geflügel,19.0
+Pouletflügeli gewürzt​,7.8,4.95,36.53846153846153,11.5-13.5,Lidl,Geflügel,19.0
+Denner Schweinsgeschnetzeltes,1.5,1.12,25.33333333333333,2.5-8.5,Denner,Schwein,18.0
+Denner Tessinerbraten,1.99,1.19,40.20100502512564,9.5-15.5,Denner,Schwein,19.0
+Luganighe Mix​,,8.99,0.0,11.5-13.5,Lidl,Unbekannt,19.0
+ASC Lachs Minispiess​,3.49,2.49,28.65329512893983,11.5-13.5,Lidl,Fisch & Meeresfrüchte,19.0
+Cervelats,12.45,7.99,35.82329317269077,11.5-16.5,Lidl,Gemischt,19.0
+Poulet-Kalbsbratwurst,3.95,2.95,25.31645569620254,11.5-16.5,Lidl,Gemischt,19.0
+St. Galler Bratwurst,14.36,8.89,38.09192200557102,11.5-16.5,Lidl,Gemischt,19.0
+Original Berner Würstchen,11.9,7.9,33.61344537815127,11.5-16.5,Lidl,Gemischt,19.0
+Duroc Burger,,4.5,0.0,9.5-15.5,Denner,Schwein,19.0
+Lammnierstück​,4.29,3.29,23.31002331002331,12.5-13.5,Lidl,Lamm,19.0
+Grillfackeln mariniert​,9.49,6.99,26.34351949420443,15.5-16.5,Lidl,Unbekannt,19.0
+Stucki's Königssteak​,8.99,6.99,22.246941045606235,15.5-16.5,Lidl,Unbekannt,19.0
+Burger XXL​,,7.99,0.0,15.5-16.5,Lidl,Rind,19.0
+Bio Weiderind Plätzli​,5.29,3.99,24.57466918714556,15.5-16.5,Lidl,Rind,19.0
+ASC Pangasius Spiessli​,,2.49,0.0,15.5-16.5,Lidl,Fisch & Meeresfrüchte,19.0
+ASC Grilllachs mariniert​,8.99,6.99,22.246941045606235,15.5-16.5,Lidl,Fisch & Meeresfrüchte,19.0
+Denner BBQ Churrasco,7.2,4.8,33.33333333333334,9.5-15.5,Denner,Schwein,19.0
+Denner falsches Schweinsfilet,2.29,1.29,43.66812227074236,9.5-15.5,Denner,Schwein,19.0
+Luganiga lunga Schweinsgrillwurst,9.2,5.2,43.47826086956521,9.5-15.5,Denner,Schwein,19.0
+Denner Schweinshals,19.9,9.9,50.25125628140703,16.5-22.5,Denner,Schwein,20.0
+Denner Schweinswürstli,8.0,6.35,20.625,16.5-22.5,Denner,Schwein,20.0
+Denner Pouletbrust Minutenschnitzel,2.42,1.52,37.1900826446281,9.5-15.5,Denner,Geflügel,19.0
+Denner Pouletbrustspiessli,3.75,2.09,44.266666666666666,9.5-15.5,Denner,Geflügel,19.0
+Black Angus Rindsentrecôte,5.9,3.49,40.84745762711864,12.5-13.5,Denner,Rind,19.0
+Suttero Pouletbrüstli,3.65,2.6,28.767123287671225,8.5-13.5,Volg,Geflügel,19.0
+BAER Happily Fromella Provençale 2x 220g,13.6,11.95,12.132352941176478,16.5-21.5,Coop,Käse,20.0
+Cervelats,11.5,6.9,40.0,16.5-21.5,Coop,Gemischt,20.0
+Denner BBQ Schweinsnierstücksteaks,2.5,1.5,40.0,16.5-19.5,Denner,Schwein,20.0
+Denner BBQ Holzfällersteak,1.79,1.79,0.0,16.5-19.5,Denner,Schwein,20.0
+Kalbs-Luganighetta,,3.15,0.0,16.5-21.5,Coop,Rind,20.0
+Rinds-Grillwurst,,2.95,0.0,16.5-21.5,Coop,Rind,20.0
+Denner BBQ Spare Ribs,2.49,2.49,0.0,16.5-19.5,Denner,Schwein,20.0
+Denner BBQ Grill Spiessli,2.99,1.49,50.167224080267566,16.5-19.5,Denner,Schwein,20.0
+Denner Schweinskotelett,9.6,6.95,27.604166666666657,19.05-20-05,Denner,Schwein,20.0
+Schweinsbrustspitz am Stück mariniert​,1.69,1.19,29.585798816568044,27.4-29-4,Lidl,Schwein,17.0
+The Green Mountain plant-based Burger,,6.95,30.0,16.5-21.5,Coop,Ersatzprodukt,20.0
+The Green Mountain plant-based Filet,17.5,14.3,30.0,16.5-21.5,Coop,Ersatzprodukt,20.0
+The Green Mountain plant-based Bratwurstalternative,,6.95,30.0,16.5-21.5,Coop,Ersatzprodukt,20.0
+Rindsfiletsteak Angus ca. 400g,9.5,6.6,30.526315789473685,16.5-21.5,Coop,Rind,20.0
+Bell pouletteileplatte,,9.95,0.0,16.5-21.5,Coop,Geflügel,20.0
+Schweinragout,5.55,4.45,19.819819819819813,1.5-3.5,Lidl,Schwein,17.0
+Ticinella Salsiccia 2x300g,27.0,13.6,49.62962962962963,16.5-21.5,Coop,Gemischt,20.0
+Natura-Veal Kalbssteak Nierstück,18.5,11.9,35.67567567567568,16.5-21.5,Coop,Rind,20.0
+Schudel's Schweine H ohrücken,7.89,5.95,24.58808618504436,4.5-6.5,Lidl,Schwein,18.0
+Bell Rinds Farmersteak mariniert ca. 375g,21.35,14.6,31.61592505854801,16.5-21.5,Coop,Rind,20.0
+Cervelats,11.5,6.9,40.0,16.5-21.5,Coop,Gemischt,20.0
+St. Galler Kalbsbratwurst 3x2 Stück,16.5,12.95,21.51515151515152,16.5-21.5,Coop,Gemischt,20.0
+Lammracks,6.2,4.9,20.967741935483858,16.5-21.5,Coop,Lamm,20.0
+Pouletwürfel ca. 450g,3.75,2.25,40.0,16.5-21.5,Coop,Geflügel,20.0
+Bell Meatballs Nature,6.75,4.95,26.666666666666657,16.5-21.5,Coop,Rind,20.0
+Schweinshalssteak Paprika XXL,,9.9,0.0,4.5-6.5,Lidl,Schwein,18.0
+Schweinsplätzli vom Stotzen,,9.9,0.0,8.5-10.5,Lidl,Schwein,18.0
+M-Classic · Cervelas,9.75,7.5,23.076923076923062,16.5-22.5,Migros,Gemischt,20.0
+Optigal · Pouletgeschnetzeltes,24.15,15.9,34.161490683229815,16.5-22.5,Migros,Geflügel,20.0
+Optigal Poulet Mini Filets,3.65,3.1,15.06849315068493,16.5-22.5,Migros,Geflügel,20.0
+Optigal · Pouletschenkel,14.5,9.9,31.72413793103448,16.5-22.5,Migros,Geflügel,20.0
+M-Classic · Rindsentrecôte,5.9,4.7,20.33898305084746,16.5-22.5,Migros,Rind,20.0
+Hackfleisch vom Schwein Duopack​,,8.99,0.0,11.4-13.5,Lidl,Schwein,
+Braten,3.8,3.0,21.05263157894737,,Migros,Rind,
+Rindshamburger,,6.3,0.0,16.5-22.5,Migros,Rind,20.0
+Migros Bio Rindssteaks BBQ mariniert,7.9,4.7,40.50632911392405,16.5-22.5,Migros,Rind,20.0
+Churascospiesse mariniert​,,5.99,0.0,11.4-13.5,Lidl,Schwein,
+Grill mi ASC Lachstranchen,3.2,2.55,20.31250000000001,16.5-22.5,Migros,Fisch & Meeresfrüchte,20.0
+M-Classic Mini Meatballs Spiessli Käse,7.5,7.5,0.0,16.5-29.5,Migros,Gemischt,
+Grill mi MSC Thunfisch Sumach,6.3,6.3,0.0,16.5-29.5,Migros,Fisch & Meeresfrüchte,
+M-Classic GrillMi · Schwertfischfilet ohne Haut,6.8,6.8,0.0,16.5-29.5,Migros,Fisch & Meeresfrüchte,
+Grill mi MSC Jakobsnüsse,7.0,7.0,0.0,16.5-29.5,Migros,Fisch & Meeresfrüchte,
+MSC Kammmuschel Spiessli,,6.49,0.0,17.5-20.5,Lidl,Fisch & Meeresfrüchte,20.0
+Pouletbrustgeschnetzeltes,7.78,4.99,35.861182519280206,17.5-20.5,Lidl,Geflügel,20.0
+Spare Ribs Paprika​ (nur in der Deutsch- und Westschweiz),2.49,1.69,32.128514056224915,12.5-13.5,Lidl,Schwein,19.0
+Irisches Entrecôte Dry Aged,,5.99,0.0,17.5-20.5,Lidl,Rind,20.0
+Stucki's Farmerspiess,2.49,1.89,24.09638554216869,17.5-20.5,Lidl,Unbekannt,20.0
+Grillwurst,4.99,2.99,40.08016032064128,17.5-20.5,Lidl,Gemischt,20.0
+Lammgigot,,1.99,0.0,19.5-20.5,Lidl,Lamm,20.0
+Fleischspiesse mit Peperoni,,7.99,0.0,19.5-20.5,Lidl,Unbekannt,20.0
+Poulet Minifilet,6.58,4.79,27.20364741641337,22.5-24.5,Lidl,Geflügel,20.0
+Kalbskoteletts,,4.49,0.0,22.5-24.5,Lidl,Rind,20.0
+Schweinshals Koteletts Duopack,11.98,8.99,24.95826377295492,17.5-20.5,Lidl,Schwein,20.0
+Huftsteak natur XXL,,9.9,0.0,22.5-24.5,Lidl,Schwein,20.0
+Speckspiesse,,5.95,0.0,22.5-24.5,Lidl,Schwein,20.0
+RINDSHUFT,,3.0,0.0,17.5-24-5,Aldi,Rind,20.0
+COUNTRY’S BEST Rinds-Asado Picanha,,3.0,0.0,17.5-24-5,Aldi,Rind,20.0
+COUNTRY'S BEST Holzfällersteak,,1.0,0.0,17.5-24-5,Aldi,Unbekannt,20.0
+BBQ Rindshuftsteak Steakbutter-Aroma,,4.99,0.0,17.5-24-5,Aldi,Rind,20.0
+Schweinssteak gewürzt,7.99,5.99,25.031289111389228,22.5-24.5,Lidl,Schwein,20.0
+GrillMi IP-SUISSE · Holzfällersteak · gewürzt,1.95,1.35,30.76923076923076,25.4-30.4,Migros,Schwein,17.0
+Schweinsbrustspitz,1.6,1.1,31.25,25.4-1.8,Migros,Schwein,
+BBQ KALBS SPARERIBS ,,2.99,0.0,17.5-24-5,Aldi,Rind,20.0
+St. Galler Olma Bratwürste,11.85,7.95,32.91139240506328,27.04.-30.04.,Migros,Schwein,17.0
+BBQ Poulet Grillsteak,,2.49,0.0,17.5-24-5,Aldi,Geflügel,20.0
+BBQ Poulet Grillfackeln,,9.49,0.0,17.5-24-5,Aldi,Geflügel,20.0
+BBQ Lamellenspiess,,2.49,0.0,17.5-24-5,Aldi,Unbekannt,20.0
+BBQ Fackelspiess gefüllt,,8.99,0.0,17.5-24-5,Aldi,Unbekannt,20.0
+Schweinehalssteak mariniert,2.0,1.4,30.0,2.5-8-5,Migros,Schwein,18.0
+BBQ Grillspiess,,8.99,0.0,17.5-24-5,Aldi,Gemischt,20.0
+Lyttos Grillkäse Halloumi,,3.49,0.0,17.5-24-5,Aldi,Käse,20.0
+Alpina BRATWURST,,3.49,0.0,17.5-24-5,Aldi,Gemischt,20.0
+BBQ Luganighetta,,4.99,0.0,17.5-24-5,Aldi,Unbekannt,20.0
+BBQ Bratwurst Spezialitäten,,4.49,0.0,17.5-24-5,Aldi,Unbekannt,20.0
+BBQ Brat- und Grillkäsetaler,,3.85,0.0,17.5-24-5,Aldi,Käse,20.0
+Grill mi Scheinehohrückensteaks,2.5,2.5,0.0,2.5-8-5,Migros,Schwein,18.0
+BBQ Pouletschenkelsteak,5.49,3.0,45.35519125683061,17.5-20-5,Aldi,Geflügel,20.0
+Schweinehalssteak ,2.0,1.6,20.0,2.5-8-5,Migros,Schwein,18.0
+Black Angus Rib Eye Steak,6.43,4.59,28.615863141524105,16.5-22.5,Denner,Rind,20.0
+Denner Hackfleisch,11.9,7.5,36.97478991596639,16.5-22.5,Denner,Gemischt,20.0
+Denner BBQ Pouletschenkelsteak,16.6,9.95,40.06024096385544,16.5-22.5,Denner,Geflügel,20.0
+Spiess St. Galler OLMA-Bratwurst IGP,,3.6,0.0,16.5-22.5,Denner,Gemischt,20.0
+Denner Wienerli,8.0,6.35,20.625,16.5-22.5,Denner,Gemischt,20.0
+Filet de porc mariné,3.15,1.8,42.85714285714285,9.5-15.5,Migros,Schwein,19.0
+Fricassée de porc,1.65,1.3,21.212121212121204,,Migros,Schwein,
+Tratiton Schweinsbratwürste,8.95,5.8,35.19553072625699,9.5-15.5,Migros,Schwein,19.0
+Schweinsnierenstück,3.05,2.4,21.311475409836063,,Migros,Schwein,
+Denner BBQ Pouletbrust,2.49,2.49,0.0,16.5-19.5,Denner,Geflügel,20.0
+Denner BBQ Pouletschenkel,1.99,1.99,0.0,16.5-19.5,Denner,Geflügel,20.0
+M-Classic · Schweinsfilet,4.5,3.6,20.0,16.5-22.5,Migros,Schwein,20.0
+Bigler BBQ Grillplatte,11.3,7.9,30.088495575221245,16.5-19.5,Denner,Gemischt,20.0
+Agri Natura Schweinssteak,4.05,2.75,32.09876543209876,26.4-29.4,Volg,Schwein,17.0
+Denner BBQ Pouletflügeli,7.8,4.9,37.17948717948717,19.05-20-05,Denner,Geflügel,20.0
+Denner BBQ Luganighette Ticinesi,5.9,4.5,23.728813559322035,16.5-19.5,Denner,Gemischt,20.0
+SUTTERO FACKELSPIESS,3.35,2.65,20.895522388059703,17.05-20-05,Volg,Unbekannt,20.0
+,,,19.4547245791186,,,,

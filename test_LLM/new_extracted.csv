@@ -1,0 +1,439 @@
+product_name,original_price,discount_price,percentage_discount,category,supermarket,discount_interval
+BEST TESSINERSTEAK,,7.0,0.0,Rind,Aldi,16.0
+ITALIENISCHER KÄSE DOP,4.29,2.99,30.0,Käse,Aldi,16.0
+PARMIGIANO REGGIANO DOP,5.99,3.99,33.0,Käse,Aldi,16.0
+GRANA PADANO DOP,3.89,2.69,30.0,Käse,Aldi,16.0
+MOZZARELLA TRIO,1.29,5.79,,Käse,Aldi,16.0
+SCAMORZINE,1.25,2.49,,Käse,Aldi,16.0
+KÄSEWÜRFEL DOP,1.5,2.99,,Käse,Aldi,16.0
+Tessiner Grillwurst,,4.99,,Schwein,Aldi,16.0
+LE MARÉCHAL,25.0,23.25,6.0,Käse,Aldi,16.0
+TOMME VAUDOISE GEFÜLLT,3.99,4.45,0.0,Käse,Aldi,16.0
+REBLOCHON DE MOUDON,,4.45,0.0,Käse,Aldi,16.0
+GRUYÈRE,,3.65,0.0,Käse,Aldi,16.0
+WALLISER BERGKÄSE,,5.49,0.0,Käse,Aldi,16.0
+RACLETTE DU VALAIS AOP,,9.99,0.0,Käse,Aldi,16.0
+Käse Tilsiter Grün,,3.49,,Käse,Aldi,16.0
+Tilsiter Mild-Aromatisch,,4.49,,Käse,Aldi,16.0
+Tête de Moine/Sbrinz,,4.29,10.0,Käse,Aldi,16.0
+Ostschweizer Käsepezialitäten,,4.85,,Käse,Aldi,16.0
+Ostschweizer Rahmkäse,,3.69,,Käse,Aldi,16.0
+Glarner Alpkäse AOP,4.99,7.99,10.0,Käse,Aldi,16.0
+Prättigauer Bio-Schafskäse,,7.99,,Käse,Aldi,16.0
+PORK STEAK FROM SIRLOIN,9.99,6.0,39.0,Schwein,Aldi,16.0
+SCHWEIN SPARE RIBS,2.49,1.7,31.0,Schwein,Aldi,17.0
+SCHWEIN SPARE RIBS,2.49,1.7,31.0,Schwein,Aldi,17.0
+RINDFILET BLACK ANGUS,50.0,5.0,90.0,Rind,Aldi,17.0
+SCHWEINS-HACKFLEISCH,,8.0,,Schwein,Aldi,17.0
+RINDS-ENTRECÔTE BLACK ANGUS,30.0,3.0,90.0,Rind,Aldi,17.0
+RONCO DI SASSI VINO ROSSO,7.99,5.0,,Geflügel,Aldi,17.0
+RUMSTECK DE BŒUF BLACK ANGUS,30.0,24.0,20.0,Rind,Aldi,18.0
+POULET EN SACHET DE CUISSON,,7.0,,Geflügel,Aldi,18.0
+PILONS DE POULET,6.49,4.0,,Geflügel,Aldi,18.0
+FILETS DE THON À L’EAU,1.49,1.0,,Fisch & Meeresfrüchte,Aldi,18.0
+LAMMKOTELETTS,25.0,7.5,,Schwein,Aldi,19.0
+PARTY FLÜGELI IN GRILLSCHALE,6.5,3.0,,Geflügel,Aldi,19.0
+ORIGINAL BERNER WÜRSTCHEN,5.95,4.15,30.0,Schwein,Aldi,19.0
+RACLETTE ¼ LAIB SURCHOIX,,11.99,,Käse,Aldi,19.0
+SCHWEINSSTEAKS VOM HALS,,9.99,,Schwein,Aldi,19.0
+POULET-FILETSPITZEN,,7.99,,Geflügel,Aldi,19.0
+POULET-FILET-SPIESSLI,,7.99,,Geflügel,Aldi,19.0
+SCHWEINSHUFTSTEAK,,6.99,,Schwein,Aldi,19.0
+LUGANIGHE,,2.99,,Schwein,Aldi,19.0
+OLMA / ST. GALLER BRAT-WURST,,3.59,,Schwein,Aldi,19.0
+KÄSE (Gruyère oder Emmentaler),,6.99,,Käse,Aldi,19.0
+LUZERNE RAHMKÄSE,7.29,5.59,23.0,Käse,Aldi,19.0
+FRANZÖSISCHER WEICHKÄSE,2.43,5.49,0.0,Käse,Aldi,19.0
+SCHWEIN COSTINE ROYAL,1.99,1.2,39.0,Schwein,Aldi,19.0
+TRUTEN-MINSTEAKS,12.5,5.0,-60.0,Geflügel,Aldi,19.0
+THUNFISCH FILETS IN ÖL,1.69,1.0,-40.7,Fisch & Meeresfrüchte,Aldi,19.0
+DÔLE DU VALAIS AOC,5.95,5.0,-15.9,Käse,Aldi,19.0
+RINDS-ASADO PICANHA,,3.0,,Rind,Aldi,20.0
+HOLZFÄLLER-STEAK,,1.0,,Rind,Aldi,20.0
+RINDSHUFTSTEAK STEAKBUTTER-AROMA,4.99,6.79,,Rind,Aldi,20.0
+SCHWEINSSTEAKS VOM HALS GEWÜRZT,2.49,5.99,,Schwein,Aldi,20.0
+SCHWEINS-HOHRÜCKENSTEAK,2.0,5.99,,Schwein,Aldi,20.0
+SCHWEIN SPARE RIBS,24.9,2.49,,Schwein,Aldi,20.0
+SCHWEIN COSTINE ROYAL,19.9,1.99,,Schwein,Aldi,20.0
+POULET GRILLSTEAK,24.9,2.49,,Geflügel,Aldi,20.0
+POULET GRILLFACKELN,15.82,9.49,,Geflügel,Aldi,20.0
+LAMELLENSPIESS,24.9,8.99,,Gemischt,Aldi,20.0
+SCHWEINSFILET-SPIESS MIT SPECK,49.9,8.99,,Schwein,Aldi,20.0
+GRILLSPIESS,3.0,8.99,,Gemischt,Aldi,20.0
+FACKELSPIESS GEFÜLLT,2.25,8.99,,Gemischt,Aldi,20.0
+GRILLKÄSE HALLOUMI,,3.49,0.0,Käse,Aldi,20.0
+BRATWURST,,3.49,,Schwein,Aldi,20.0
+LUGANIGHETTA,,4.99,,Schwein,Aldi,20.0
+BRATWURST-SPEZIALITÄTEN,,4.49,,Schwein,Aldi,20.0
+BRAT- UND GRILLKÄSE-TALER,,3.85,,Käse,Aldi,20.0
+MANCHEGO,4.99,6.99,,Käse,Aldi,20.0
+PAIVA QUEIJO DE LAMEGO AMANTEIGADO,,2.99,,Käse,Aldi,20.0
+SCHWEDEN-FEUER,,7.99,0.0,Schwein,Aldi,20.0
+SCHWEINS-STEAKS VOM HALS,9.99,6.0,39.0,Geflügel,Aldi,20.0
+"Bell Schwines-Hohrückensteak, mariniert, Naturafarm, Schweiz, in Selbstbedienung, ca. 600 g",4.25,2.5,41.0,Schwein,Coop,20.0
+"Bell Pouletteileplatte, gewürzt",,9.95,,Geflügel,Coop,20.0
+Coop Pouletbrustwürfel,3.75,2.25,40.0,Geflügel,Coop,20.0
+"Bell Rinds-Farmersteak, mariniert, Schweiz",5.6,3.9,30.0,Rind,Coop,20.0
+"Coop Naturafarm Natura-Veal Kalbssteak, Schweiz",9.3,5.95,36.0,Rind,Coop,20.0
+"Coop Lachsfilet Royal, geräuchert, aus Zucht, Norwegen",19.8,14.95,24.0,Fisch & Meeresfrüchte,Coop,20.0
+"Coop Lachstranchen, ASC, aus Zucht, Norwegen",23.9,13.95,41.0,Fisch & Meeresfrüchte,Coop,20.0
+"Dorschfilet Royal, MSC, aus Wildfang, Nordostatlantik",27.9,14.95,46.0,Fisch & Meeresfrüchte,Coop,20.0
+"Gelbflossenthunfischfilet, aus Wildfang, Indischer/Pazifischer Ozean",6.95,5.95,14.4,Fisch & Meeresfrüchte,Coop,20.0
+Salakis,8.9,6.95,21.0,Käse,Coop,20.0
+Galbani Mozzarella Mini,7.1,5.95,,Käse,Coop,20.0
+Galbani Mozzarella,9.6,7.95,,Käse,Coop,20.0
+Baer Happily Fromella Provencale,13.6,11.95,,Käse,Coop,20.0
+"Emmi Tête de Moine, AOP, Rosetten",11.9,9.95,,Käse,Coop,20.0
+"Leerdammer Original, Scheiben",8.6,7.3,,Käse,Coop,20.0
+"Bell Bauernspeissli (Schwein), Schweiz",2.7,1.85,31.0,Schwein,Coop,20.0
+"Coop Schweinskrustenbraten, Schweiz",18.0,9.0,50.0,Schwein,Coop,20.0
+"Coop Rindsfiletsteak Angus, Uruguay, in Selbstbedienung, ca. 400 g",9.5,6.6,30.0,Rind,Coop,20.0
+The Green Mountain Burger,6.95,4.85,30.0,Vegetarisches oder veganes Ersatzprodukt,Coop,20.0
+Lotao Bio-Veggie-Hack,3.95,2.75,30.0,Vegetarisches oder veganes Ersatzprodukt,Coop,20.0
+Estrella Galicia,10.5,7.85,25.0,Käse,Coop,20.0
+Bell Schweins-Pfeffersteak,2.7,1.6,40.0,Schwein,Coop,18.0
+Coop Rindshufsteak Angus,7.6,4.95,34.0,Rind,Coop,18.0
+Coop Craft Rind- und Schweinefleisch-Grillplatte,9.95,7.95,20.0,Gemischt,Coop,18.0
+"Coop Naturafarm Schweinsfiletspiess, mariniert",6.0,4.8,20.0,Schwein,Coop,18.0
+Coop Pouletbrust,2.65,1.55,41.0,Geflügel,Coop,18.0
+"Coop Naturaplan Bio-Schweinsnhörücken, mariniert",5.0,2.5,50.0,Schwein,Coop,18.0
+"Bell Pouletflügel, gewürzt",1.55,1.15,25.0,Geflügel,Coop,18.0
+"Beyond Meat Burger, 2 x 226 g",11.9,9.5,20.0,Vegetarisches oder veganes Ersatzprodukt,Coop,18.0
+"Coop Rinds-Hamburger, tiefgekühlt, 30 x 80 g",46.1,22.95,50.0,Rind,Coop,18.0
+"Coop Naturaplan Bio-Lachsfilets, aus Zucht, Irland, tiefgekühlt, 500 g",27.9,19.95,28.0,Fisch & Meeresfrüchte,Coop,18.0
+"Coop Poulet Crispy, tiefgekühlt, 1.5 kg",24.8,14.95,34.0,Geflügel,Coop,18.0
+"Coop Crevetten Black Tiger, Tail-on, gekocht, ASC, aus Zucht, Vietnam, tiefgekühlt, 750 g",24.95,14.95,40.0,Fisch & Meeresfrüchte,Coop,18.0
+"Coop Naturaplan Bio-Garten gemüse, tiefgekühlt, 3 x 500 g",15.6,10.45,33.0,Grillgemüse,Coop,18.0
+"Bell Beefburger, gewürzt, Schweiz, in Selbstbedienung, 4 x 125 g (100 g = 1.79)",12.95,8.95,30.0,Rind,Coop,18.0
+"Bell Barbecue Schweins-Spareribs, mariniert, Schweiz, in Selbstbedienung, 2 x ca. 600 g",3.05,1.5,50.0,Schwein,Coop,18.0
+"Bäll Pouletbrustspiessli, Schweiz",3.95,2.75,30.0,Geflügel,Coop,18.0
+"Bell Rinds-Farmsteak, mariniert",5.6,3.9,30.0,Rind,Coop,18.0
+Oecoplan Fleischspiessli,,2.95,30.0,Gemischt,Coop,18.0
+BBQ Mini-Grillpeperoni,4.95,3.95,20.0,Grillgemüse,Coop,18.0
+BBQ Grill Pimientos de Padrón,3.95,2.95,25.0,Grillgemüse,Coop,18.0
+Corn,3.75,2.6,30.0,Grillgemüse,Coop,18.0
+Stubbs Hickory Bourbon BBQ Sauce,8.95,7.15,20.0,Schwein,Coop,18.0
+Bell Feinenbeilspiess (Schweiz),3.6,2.5,30.0,Geflügel,Coop,18.0
+"Bell Poulet American Cut auf Zedernholz, Schweiz",14.5,9.95,31.0,Schwein,Coop,18.0
+Coop Poulet-Minifilet,3.75,2.25,40.0,Geflügel,Coop,19.0
+Bell Schweinsnhalssteak,11.95,6.95,41.0,Schwein,Coop,19.0
+"Coop Naturaplan Bio-Crevettenschwänze, 21–25, Tail-on, gekocht, aus Zucht, Vietnam",8.4,5.95,29.0,Fisch & Meeresfrüchte,Coop,19.0
+"Coop Lachfilet ohne Haut, ASC, aus Zucht, Norwegen",21.0,14.95,28.0,Fisch & Meeresfrüchte,Coop,19.0
+"Mövenpick Bio-Rauchlachs, aus Zucht, Schottland",22.5,14.95,33.0,Fisch & Meeresfrüchte,Coop,19.0
+"Bell Pouletspiessli Telly Cherry, Schweiz",4.3,3.4,20.0,Geflügel,Coop,19.0
+"Coop Naturafarm Schweinsnierstück, Schweiz",4.1,3.0,26.0,Schwein,Coop,19.0
+"Coop Pouletchenkel, Schweiz",6.1,5.0,20.0,Geflügel,Coop,19.0
+Galbani Mozzarella,7.95,9.6,,Käse,Coop,19.0
+Sapori d'Italia Ricotta,1.55,1.95,20.0,Käse,Coop,19.0
+Sapori d'Italia Pecorino Romano,2.4,2.9,,Käse,Coop,19.0
+Coop Grana Padano,12.5,16.8,25.0,Käse,Coop,19.0
+Bell Schweinsgrillspiess,3.5,1.75,50.0,Schwein,Coop,19.0
+Coop Naturafarm Natura-Beef Rindsdiesch,2.65,1.55,41.0,Rind,Coop,19.0
+Coop Naturaplan Bio-Appenzeller mild-würzig,2.55,1.8,29.0,Käse,Coop,18.0
+Appenzeller Rahmkäse,2.55,1.95,23.0,Käse,Coop,18.0
+Appenzeller Hobelrollen,4.85,3.5,27.0,Käse,Coop,18.0
+Appenzeller Reibkäse,8.85,6.95,21.0,Käse,Coop,18.0
+Naturaplan Bio-Salmon-Poké-Bowl,,14.95,,Käse,Coop,18.0
+Naturaplan Bio-Protein-Bowl,,7.5,,Käse,Coop,18.0
+The Green Mountain Plant-Based BBQ Spiess,,6.95,,Käse,Coop,18.0
+The Green Mountain Plant-Based Paprika Steak,,8.95,,Vegetarisches oder veganes Ersatzprodukt,Coop,18.0
+The Green Mountain Plant-Based Teriyaki Spiess,6.95,3.87,,Vegetarisches oder veganes Ersatzprodukt,Coop,18.0
+The Green Mountain Plant-Based BBQ Spiess,6.95,3.87,,Vegetarisches oder veganes Ersatzprodukt,Coop,18.0
+The Green Mountain Plant-Based Paprika Steak,8.95,2.99,,Schwein,Coop,18.0
+Bell Schweins-Pfeffersteak,2.7,1.6,40.0,Rind,Coop,18.0
+"Sapori d'Italia Pecorino Romano, DOP",2.9,2.4,20.0,Käse,Coop,19.0
+Coop Naturaplan Bio-Feta,,4.4,,Käse,Coop,19.0
+Galbani Pecorino Romano DOP,,,,Käse,Coop,19.0
+"Lachsrollenfilet mit Haut, ASC, aus Zucht, Italien, in Selbstbedienung, per 100 g",,3.6,,Fisch & Meeresfrüchte,Coop,19.0
+"Wolfsbarsch Riserva Azzurra, ganz, nicht ausgenommen, aus Zucht, Italien, in Selbstbedienung, per 100 g",,2.7,,Fisch & Meeresfrüchte,Coop,19.0
+"Coop Naturalplan Bio-Dorade Royal, 300–600 g, aus Zucht, Griechenland/Kroatien, in Bedienung, per 100 g",,3.4,,Fisch & Meeresfrüchte,Coop,19.0
+"Sardellen, aus Wildfang, Mittelmeer, in Bedienung, per 100 g",,1.95,,Fisch & Meeresfrüchte,Coop,19.0
+"Steinbutt ganz, aus Zucht, Frankreich/Spanien/Portugal, in Bedienung, ca. 1–2 kg, per 100 g",,4.5,,Fisch & Meeresfrüchte,Coop,19.0
+"Vongole klein, MSC, aus Wildfang, Mittelmeer, in Bedienung, per 100 g",,2.8,,Fisch & Meeresfrüchte,Coop,19.0
+"Sapori d'Italia Pulpo Stücke, aus Wildfang, Westpazifik, in Selbstbedienung, 120 g",,9.95,,Fisch & Meeresfrüchte,Coop,19.0
+"Sapori d'Italia Meeresfrüchtesalat, aus Wildfang und Zucht, in Selbstbedienung, 150 g",,7.5,5.5,Fisch & Meeresfrüchte,Coop,19.0
+"Sapori d'Italia gefüllte Mischmuscheln, aus Zucht, Spanien, in Selbstbedienung, 150 g",,7.95,,Fisch & Meeresfrüchte,Coop,19.0
+Wolfsbarsch,,2.7,,Fisch & Meeresfrüchte,Coop,19.0
+Dorade,,3.4,,Fisch & Meeresfrüchte,Coop,19.0
+Lachsforellenfilet,,3.6,,Fisch & Meeresfrüchte,Coop,19.0
+Vongole Veraci,,3.5,,Fisch & Meeresfrüchte,Coop,19.0
+Shrimps & Pepper,6.95,5.95,,Fisch & Meeresfrüchte,Coop,19.0
+Bio-Wolfsbarsch,,,,Geflügel,Coop,19.0
+Bio-Dorade,,,,Schwein,Coop,19.0
+Chili-Bauernbratwurst,,2.35,,Schwein,Coop,20.0
+Kräuter-Grillschnecke,,2.95,,Schwein,Coop,20.0
+Kalbs-Luganighette,,3.15,,Rind,Coop,20.0
+Rinds-Grillwurst,,2.95,,Rind,Coop,20.0
+"SAPORI D'ITALIA Parmigiano Reggiano, DOP",,3.25,,Käse,Coop,20.0
+The Green Mountain plant-based Schinkenalternative,5.5,4.95,10.0,Vegetarisches oder veganes Ersatzprodukt,Coop,20.0
+Willimann Big Dagmerseller Griller,,7.9,,Schwein,Coop,20.0
+Sandmeier Sandis Grill-Mix,,4.6,,Gemischt,Coop,20.0
+Künzli Roschbratwurst,,7.2,,Schwein,Coop,20.0
+Bell Schweins-Hüftsteak,4.25,2.5,41.0,Schwein,Coop,20.0
+Denner Schwiensterstück,1.99,1.35,32.0,Schwein,Denner,17.0
+Denner Lachsfilet,11.35,8.5,25.0,Fisch & Meeresfrüchte,Denner,17.0
+Denner Poulet-Mini-Filet,11.75,7.95,27.0,Geflügel,Denner,17.0
+Denner BBQ Spare Ribs,2.49,1.69,32.0,Schwein,Denner,17.0
+Denner Rindsentrecôte,5.9,3.99,32.0,Rind,Denner,17.0
+Fjordfisk Sockeye Wildlachs,9.7,6.95,28.0,Fisch & Meeresfrüchte,Denner,17.0
+Heiloges Party-Crevetten,6.6,4.95,25.0,Fisch & Meeresfrüchte,Denner,17.0
+Pillon Feta,5.2,4.15,20.0,Käse,Denner,17.0
+Cœur de Lion Coulommiers,5.2,4.6,0.0,Käse,Denner,17.0
+Greco Halloumi Grillkäse,3.99,2.95,25.0,Käse,Denner,17.0
+Rindsfilet Australian Outback Beef,9.99,4.99,50.0,Rind,Denner,17.0
+Denner BBQ Schweinesteak,16.7,9.95,40.0,Schwein,Denner,18.0
+Denner Rindshuftsteak,7.99,3.99,50.0,Rind,Denner,18.0
+Denner Dorade,13.9,8.9,35.0,Fisch & Meeresfrüchte,Denner,18.0
+Denner BBQ Grillhühnchen-Mix,2.0,8.9,25.0,Geflügel,Denner,18.0
+Denner Geflügelbratwurst,9.0,6.9,30.0,Geflügel,Denner,18.0
+Lachsinger Lachs Duo,8.85,4.5,49.0,Fisch & Meeresfrüchte,Denner,18.0
+Aika Snack-Täufel,,10.95,27.0,Geflügel,Denner,18.0
+Traiteur Seelachs-Pangasius-Chusperli,8.0,6.5,20.0,Käse,Denner,18.0
+Würze,2.99,1.79,40.0,Geflügel,Denner,18.0
+Denner Schweinshälse,9.9,4.95,50.0,,Denner,20.0
+Coca-Cola,23.8,12.5,47.0,,Denner,20.0
+Zalú Primitivo Ad Manduria 20P,88.8,44.4,50.0,,Denner,20.0
+Black Angus Rib Eye Steak,6.43,4.59,28.0,,Denner,20.0
+Denner Pangasiusfilet,4.95,2.66,46.0,,Denner,20.0
+Spless St. Galler OLMA-Bratwurst IGP,2.1,3.6,,,Denner,20.0
+Denner Wienerl,7.95,6.35,20.0,,Denner,20.0
+Denner Schwedenwurst,6.35,4.95,20.0,,Denner,20.0
+Suttero Salami IGP Milano,14.3,9.95,30.0,,Denner,20.0
+Denner Cottowrüfel,6.6,3.95,40.0,,Denner,20.0
+Denner Hackfleisch,11.9,7.5,36.0,,Denner,20.0
+Denner BBQ Pouletsteak,16.6,9.95,40.0,,Denner,20.0
+Hänsel Poulet Dölce,11.8,7.95,31.0,,Denner,20.0
+Küchen König Curry King XXL,8.9,6.6,25.0,,Denner,20.0
+Elvira Canneloni,7.99,5.0,49.0,,Denner,20.0
+Denner BBQ Schweinsbratenschnitt,2.5,1.79,40.0,,Denner,20.0
+Denner BBQ Spare Ribs,3.12,2.49,20.0,,Denner,20.0
+Denner BBQ Pouletbrust,3.8,2.49,20.0,,Denner,20.0
+Denner BBQ Pouletschnitzel,2.49,1.98,20.0,,Denner,20.0
+Denner BBQ Grillpfanne,2.1,1.49,30.0,,Denner,20.0
+Migros BBQ Grillplatte,10.99,7.9,28.0,,Denner,20.0
+Denner BBQ Chipolatas,6.5,4.5,23.0,,Denner,20.0
+Denner BBQ Pouletchefin,1.98,1.49,25.0,,Denner,20.0
+Vieux Mussets Johannisberg du Valais AOC,63.5,41.7,33.0,,Denner,20.0
+Denner Schwinkotelett,9.5,6.95,27.0,,Denner,20.0
+Denner BBQ Pouletflügel,7.8,4.9,37.0,,Denner,20.0
+Tereca,80.0,72.0,10.0,,Denner,20.0
+Denner Kap-Seehecht-Filet,8.5,6.8,20.0,Fisch & Meeresfrüchte,Denner,19.0
+Pur Duroc Burger,,4.5,,Schwein,Denner,19.0
+Denner BBQ Churrasco,7.2,4.8,33.0,Schwein,Denner,19.0
+Denner falsches Schweinsfilet,2.29,1.29,43.0,Schwein,Denner,19.0
+Luganiga lunga Schweinsgrillwurst,9.0,5.2,43.0,Schwein,Denner,19.0
+Denner Pouletbrustspiessli gewürzt,3.75,2.09,44.0,Geflügel,Denner,19.0
+Black Angus Rindsentrecôte,5.9,3.49,40.0,Rind,Denner,19.0
+Saucisses à rôtir de porc Tradition,8.95,5.8,35.0,Schwein,Denner,19.0
+MSC Kammmuschel Spiessli,,6.49,,Fisch & Meeresfrüchte,Lidl,20.0
+Schweinsnhals Koteletts Duopack,11.99,8.99,24.0,Schwein,Lidl,20.0
+Irisches Entrecôte Dry Aged,,5.99,0.0,Rind,Lidl,20.0
+Stucki's Farmerspiess,2.49,1.89,24.0,Gemischt,Lidl,20.0
+Grillwurst,4.99,2.99,40.0,Schwein,Lidl,20.0
+Gruyère mild XXL,1.75,1.4,20.0,Käse,Lidl,20.0
+Fleischspiesse mit Peperoni,5.99,7.99,0.0,Gemischt,Lidl,20.0
+Grana Padano,2.39,1.39,41.0,Käse,Lidl,20.0
+Poulet Minifilet,6.5,4.79,27.0,Geflügel,Lidl,20.0
+Kalbskoteletts,,4.49,,Rind,Lidl,20.0
+Huftsteak natur XXL,,9.99,,Rind,Lidl,20.0
+Speckspiesse,,5.95,,Schwein,Lidl,20.0
+Schweinssteak gewürzt,7.99,5.99,,Schwein,Lidl,20.0
+MSC Thunfischsteak,,3.99,,Fisch & Meeresfrüchte,Lidl,20.0
+ASC Butterfly Crevetten,,4.19,,Fisch & Meeresfrüchte,Lidl,20.0
+Rindshackfleisch Duopack XXL,15.9,10.69,32.0,Rind,Lidl,17.0
+ASC Lachsforellenfilet,,1.99,,Fisch & Meeresfrüchte,Lidl,17.0
+Pulpostentakel,,4.99,,Fisch & Meeresfrüchte,Lidl,17.0
+Pouletschenkel,8.36,4.99,40.0,Geflügel,Lidl,17.0
+Schweinsbrustspitz am Stück mariniert,1.69,1.19,29.6,Schwein,Lidl,17.0
+Rinds Entrecôte,,3.49,0.0,Rind,Lidl,17.0
+Tessiner Grillwurst XXL,8.0,6.29,21.0,Schwein,Lidl,17.0
+Wiesenländer KäseScheiben,2.99,1.99,33.0,Käse,Lidl,17.0
+Spanische Käseplatte,,3.99,0.0,Käse,Lidl,17.0
+Rindshackfleisch Duopack XXL,15.3,10.69,32.0,Rind,Lidl,17.0
+Bio Zucchetti,,,30.0,Grillgemüse,Lidl,17.0
+ASC Black Tiger Crevetten,4.99,3.99,20.04,Fisch & Meeresfrüchte,Lidl,17.0
+Bio Wolfsbarsch,,2.29,,Fisch & Meeresfrüchte,Lidl,17.0
+Poulet Cordon Bleu,,4.99,,Geflügel,Lidl,17.0
+Rindshackfleisch Halal,,6.99,,Rind,Lidl,17.0
+Premium Rindshamburger,5.9,3.84,35.0,Rind,Lidl,18.0
+Rindsfilet am Stück,6.5,4.99,23.0,Rind,Lidl,18.0
+ASC Lachsfrostellenfilet,2.99,1.95,34.0,Fisch & Meeresfrüchte,Lidl,18.0
+Schudel's Schweine Hohrücken,7.89,5.95,24.0,Schwein,Lidl,18.0
+Pouletbrust XXL,2.33,1.45,37.0,Geflügel,Lidl,18.0
+Rindsentrecôte am Stück,,3.49,,Rind,Lidl,18.0
+Grillschnecke Festival,,9.89,,Gemischt,Lidl,18.0
+Schweins halssteak Paprika XXL,,9.99,,Schwein,Lidl,18.0
+Tilsiter mild,3.49,2.49,1.0,Käse,Lidl,18.0
+Mozzarella,,0.59,25.0,Käse,Lidl,18.0
+Poulet Minifilet Spiessli,6.99,4.99,28.0,Geflügel,Lidl,18.0
+Rindsfilet am Stück,5.99,4.99,,Rind,Lidl,18.0
+Schweinsplätzli vom Stotzen,,9.99,,Schwein,Lidl,18.0
+Premium Rindshamburger,6.78,5.59,35.0,Rind,Lidl,18.0
+Satayspiessli Soja-Honig,,4.99,,Vegetarisches oder veganes Ersatzprodukt,Lidl,18.0
+Steak Route 66,,9.99,,Rind,Lidl,18.0
+Cevapcici vom Rind,5.79,4.45,23.0,Rind,Lidl,18.0
+ASC Doradenfilet,,1.89,,Fisch & Meeresfrüchte,Lidl,18.0
+ASC Pangasius-Knusperli XXL,8.93,5.95,33.0,Fisch & Meeresfrüchte,Lidl,18.0
+Chicken Wings,4.99,3.99,20.0,Geflügel,Lidl,18.0
+Chicken Wings Mild,,4.99,,Geflügel,Lidl,18.0
+Chicken Drumsticks,,4.99,,Geflügel,Lidl,18.0
+Pouletflügelli gewürzt,7.69,4.95,36.0,Geflügel,Lidl,19.0
+Hackfleisch vom Schwein Duopack,,8.99,,Schwein,Lidl,19.0
+Churascospisse mariniert,,5.99,,Gemischt,Lidl,19.0
+Luganighe Mix,,8.99,,Schwein,Lidl,19.0
+MSC Eglifilet,,4.49,,Fisch & Meeresfrüchte,Lidl,19.0
+MSC Thunfischsteak,,3.49,,Fisch & Meeresfrüchte,Lidl,19.0
+ASC Lachs Minispies,3.49,2.49,,Fisch & Meeresfrüchte,Lidl,19.0
+Poulet-Kalbsbratwurst,3.95,2.95,,Gemischt,Lidl,19.0
+Gruyère AOP surchoix,4.29,3.29,,Käse,Lidl,19.0
+Emmi Luzerner Rahmkäse Scheiben,4.0,3.95,,Käse,Lidl,19.0
+St. Galler Bratwurst,14.4,8.89,38.0,Schwein,Lidl,19.0
+Original Berner Würstchen,11.0,7.9,33.0,Schwein,Lidl,19.0
+Spare Ribs Paprika,2.49,1.69,32.0,Schwein,Lidl,19.0
+Halbhartkäse Scheiben,3.99,2.99,25.1,Käse,Lidl,19.0
+Halbhartkäse Scheiben,3.99,2.99,25.1,Schwein,Lidl,19.0
+Findus Lasagne Bolognese,10.85,7.35,32.1,Rind,Lidl,19.0
+Premium Eiscreme,2.89,1.69,41.5,Rind,Lidl,19.0
+Grillfäckle mariniert,9.49,6.99,-26.0,Rind,Lidl,19.0
+Stucki's Königsteak,8.99,6.99,-22.0,Fisch & Meeresfrüchte,Lidl,19.0
+Burger XXL,,7.99,,Fisch & Meeresfrüchte,Lidl,19.0
+Bio Weiderind Plätzli,7.99,3.99,-24.0,Fisch & Meeresfrüchte,Lidl,19.0
+MSC Kammmuschel Spiessli,,6.49,,Fisch & Meeresfrüchte,Lidl,20.0
+Schweinsnhals Koteletts Duopack,,8.99,24.0,Schwein,Lidl,20.0
+Irisches Entrecôte Dry Aged,11.99,8.99,24.0,Rind,Lidl,20.0
+Stucki's Farmerspiess,2.49,1.89,24.0,Gemischt,Lidl,20.0
+Grillwurst,4.99,2.99,40.0,Schwein,Lidl,20.0
+Gruyère mild XXL,1.8,1.4,21.0,Käse,Lidl,20.0
+Fleischspiess mit Peperoni,2.86,7.99,,Gemischt,Lidl,20.0
+Grana Padano DOP,2.39,1.39,41.0,Käse,Lidl,20.0
+Poulet Minifilet,6.5,4.79,27.0,Geflügel,Lidl,20.0
+Kalbkoteletts,,4.49,,Rind,Lidl,20.0
+Huftsteak natur XXL,,9.99,,Rind,Lidl,20.0
+Speckspiesse,,5.95,,Schwein,Lidl,20.0
+Schweinssteak gewürzt,7.99,5.99,,Schwein,Lidl,20.0
+MSC Thunfischsteak,,3.99,,Fisch & Meeresfrüchte,Lidl,20.0
+ASC Butterfly Crevetten,,4.19,,Fisch & Meeresfrüchte,Lidl,20.0
+"Grill mi Rinds-BBQ-Steak mariniert, IP-SUISSE",6.9,4.1,40.0,Rind,Migros,18.0
+Cili mit Purpurbartenlachs,6.3,5.3,20.0,Fisch & Meeresfrüchte,Migros,18.0
+Don Pollo Delikatesschnitzel,12.5,9.95,20.0,Geflügel,Migros,18.0
+Kalbsplätzli,8.5,6.8,20.0,Rind,Migros,18.0
+Orginal Poulet Mini Filés,3.65,3.1,15.0,Rind,Migros,18.0
+Kalbssteaks,8.5,5.75,20.0,Grillgemüse,Migros,18.0
+Rind Parisian Rinderhack,6.5,3.7,20.0,Geflügel,Migros,18.0
+Chili-Käse Spieße,,6.9,20.0,Rind,Migros,18.0
+Pancetta a fette,2.2,1.6,21.0,Schwein,Migros,18.0
+Salsiccia Stubenküken,,2.75,20.0,Rind,Migros,18.0
+Streifenspeck,5.9,1.6,25.0,Rind,Migros,18.0
+Chili-Crisp-Rind,7.95,5.95,27.0,Schwein,Migros,18.0
+Rindhack vom Bio-Fleisch,,4.9,20.0,Geflügel,Migros,18.0
+Rindburger Classic,,4.95,20.0,Geflügel,Migros,18.0
+Streifenspeck,,5.95,27.0,Rind,Migros,18.0
+Wiener Würstchen,,5.95,27.0,Fisch & Meeresfrüchte,Migros,18.0
+Optigal Grill mi Poulet Schenkelsteaks BBQ,,1.7,,Fisch & Meeresfrüchte,Migros,18.0
+Grill Rinds- BBQ-Steak,6.9,4.1,40.0,Schwein,Migros,18.0
+Emmentaler mild,1.6,1.1,30.0,Käse,Migros,17.0
+Optigal Poulet Ober- und Unterschenkel,19.8,10.95,39.0,Geflügel,Migros,17.0
+"Pelican Pangasiusfilets, ASC",19.8,10.95,44.0,Fisch & Meeresfrüchte,Migros,17.0
+"Rindshuftsteak mariniert, IP-SUISSE",7.6,5.3,30.0,Rind,Migros,17.0
+"St. Galler Olma Bratwürste, IGP",11.85,7.95,32.0,Schwein,Migros,17.0
+"Schweins-Holzfällersteaks mariniert, IP-SUISSE",1.95,1.35,30.0,Schwein,Migros,17.0
+M-Classic Pouletschnitzel,2.4,1.65,30.0,Geflügel,Migros,17.0
+"Atlantik Rauchlachs, ASC",19.95,11.95,40.0,Fisch & Meeresfrüchte,Migros,19.0
+"Grill mi Schweinsnierstück-Steaks mariniert, IP-SUISSE",3.15,1.8,42.0,Schwein,Migros,19.0
+Tradition Schweinsbratwürste,8.95,5.8,35.0,Schwein,Migros,19.0
+Coca-Cola und Fanta,13.8,9.65,30.0,Rind,Migros,19.0
+Migros Bio Joghurts,3.6,2.85,20.0,Rind,Migros,19.0
+Ragoût de bœuf,3.4,2.7,20.0,Rind,Migros,19.0
+Rumsteck de boeuf Black Angus,,4.7,20.0,Schwein,Migros,19.0
+Filet de porc mariné Grill m,3.15,1.8,42.0,Geflügel,Migros,19.0
+Cordons-bleus valaisans,3.9,3.1,20.0,Schwein,Migros,19.0
+Fricassée de porc marinée M-Classic,1.65,1.3,20.0,Käse,Migros,19.0
+Fromage d'Italie finement prétranché,1.75,1.25,28.0,Schwein,Migros,19.0
+Saucisses du Seeland,12.0,7.95,33.0,Geflügel,Migros,19.0
+Fromage frais nature Migros Bio,2.2,1.8,20.0,Käse,Migros,19.0
+Appenzeller Surchoix,1.95,1.55,20.0,Käse,Migros,19.0
+Houmous olives Anna's Best,,3.95,0.0,Vegetarisches oder veganes Ersatzprodukt,Migros,19.0
+Pizzas au four à bois Anna's Best,11.85,8.5,28.0,Vegetarisches oder veganes Ersatzprodukt,Migros,19.0
+"Peppery Steak Grill mi, V-Love",,5.95,,Vegetarisches oder veganes Ersatzprodukt,Migros,19.0
+"Sausage Pizza Style Grill mi, V-Love",,4.5,,Vegetarisches oder veganes Ersatzprodukt,Migros,19.0
+Scotland Rauchlachs,15.3,9.0,40.0,Fisch & Meeresfrüchte,Migros,20.0
+"Schweins-Holzländersteaks mariniert, IP-SUISSE",1.95,1.35,30.0,Schwein,Migros,17.0
+M-Classiс Pouletschnitzel,2.4,1.65,30.0,Geflügel,Migros,17.0
+Emmentaler mild,1.6,1.1,30.0,Käse,Migros,17.0
+Optigal Poulet Ober- und Unterschenkel,14.5,8.8,39.0,Geflügel,Migros,17.0
+Pelican Pangasiusfilets,19.8,10.95,44.0,Fisch & Meeresfrüchte,Migros,17.0
+Baer Happily Tomme Original Bratkäse,6.8,5.45,20.0,Käse,Migros,17.0
+Optigal Pouletbrust geschnitten,7.9,5.95,24.0,Geflügel,Migros,17.0
+"Rindshuftsteak mariniert, IP-SUISSE",7.6,5.3,30.0,Rind,Migros,17.0
+"Schweinsbrustspitz, IP-SUISSE",1.6,1.1,31.0,Schwein,Migros,17.0
+V-Love Plant-Based Sea Style Fingers,5.9,4.95,0.0,Vegetarisches oder veganes Ersatzprodukt,Migros,17.0
+Gorgonzola Selezione Reale D.O.P.,4.0,3.4,15.0,Käse,Migros,17.0
+"Bio Le Gruyère rezent, AOP",2.95,2.5,15.0,Käse,Migros,17.0
+Alle Baer-Grill- und Bratkäse,6.8,5.45,20.0,Käse,Migros,17.0
+Füürtüfel Käse scharf,2.6,2.2,15.38,Käse,Migros,17.0
+"St. Galler Olma Bratwürste, IGP",11.85,7.95,32.0,Schwein,Migros,17.0
+"Pelican Crevetten Tail-on gekocht, ASC",23.9,11.95,50.0,Fisch & Meeresfrüchte,Migros,20.0
+M-Classic Rindsentrecôtes Black Angus,5.9,4.7,20.0,Rind,Migros,20.0
+Migros Bio Rindssteaks BBQ mariniert,7.9,4.7,40.0,Rind,Migros,20.0
+"Rindshamburger Swiss Black Angus, IP-SUISSE",,6.3,0.0,Rind,Migros,20.0
+"Schweinsnierstück-Plätzli, IP-SUISSE",3.05,2.4,20.0,Schwein,Migros,20.0
+Grill mit Meatball-Mini-Spiesli mit Grillkäse,,7.5,0.0,Grillgemüse,Migros,20.0
+Optigal Poulet Mini Filets,3.65,3.1,15.0,Geflügel,Migros,20.0
+Optigal Pouletschenkel,14.5,9.9,31.0,Geflügel,Migros,20.0
+M-Classic Schweinsfilet,4.5,3.6,20.0,Schwein,Migros,20.0
+Pelican Migros Bio Lachfilets,22.4,17.9,20.0,Fisch & Meeresfrüchte,Migros,20.0
+"Grill mi Gelbflossen-thunfischfilet mit Sumach, MSC",,6.3,20.0,Fisch & Meeresfrüchte,Migros,20.0
+"Grill mi Jakobsmuscheln in Chimichurri Marinade, MSC",,7.0,20.0,Fisch & Meeresfrüchte,Migros,20.0
+Grill mi Schwertfischfilet ohne Haut,,6.8,20.0,Fisch & Meeresfrüchte,Migros,20.0
+Cornatur Quorn,11.9,9.5,20.0,Vegetarisches oder veganes Ersatzprodukt,Migros,20.0
+"Grill mi-Lachstranchen mit Rosmarin, ASC und -Kabeljaufillets mit Harissa, MSC",3.2,2.55,20.0,Fisch & Meeresfrüchte,Migros,20.0
+"Le Gruyère Surchoix, AOP",2.3,1.85,19.0,Käse,Migros,20.0
+Fol Epi Scheiben,7.3,5.8,20.0,Käse,Migros,20.0
+Grana Padano gebrochen,7.3,2.5,20.0,Käse,Migros,20.0
+Appenzeller Rahmkäse cremig-würzig,2.55,2.15,-40.0,Käse,Migros,20.0
+Kiri-Dippi oder -Doppelrahm Frischkäse,9.3,7.4,20.0,Käse,Migros,20.0
+Urner Alpkäse reif,2.7,2.3,-40.0,Käse,Migros,20.0
+"Schweins-Cordons-bleus, IP-SUISSE",3.25,2.25,30.0,Schwein,Migros,20.0
+SUTTERO BARBECUE-STEAK,3.5,2.45,30.0,Rind,Volg,18.0
+CAPRICE DES DIEUX,4.95,3.95,20.0,Käse,Volg,18.0
+ZÜGER MOZZARELLA-KUGELN,6.6,4.95,25.0,Käse,Volg,20.0
+"Coop Poulet, Schweiz, in Selbstbedienung, 2 x ca. 1 kg",9.95,5.95,40.0,Geflügel,Coop,17.0
+"Coop Naturafarm Schweinskoteletts, mager, Schweiz, in Selbstbedienung, 3 Stück",2.4,1.4,41.0,Schwein,Coop,17.0
+Bell Spare ribs,3.5,2.8,20.0,Schwein,Coop,17.0
+Coop Naturafarm Natura-Beef Rindsclubsteak,5.7,4.5,21.0,Rind,Coop,17.0
+Coop Naturafarm Mixed-Grillspiesli Nature,3.9,2.95,22.0,Gemischt,Coop,17.0
+Coop RindsHackfleisch,11.6,9.95,43.0,Rind,Coop,17.0
+Bell Pouletbrust,3.55,2.8,21.0,Geflügel,Coop,17.0
+Bell KalbsSalsiccia,13.0,9.95,23.0,Gemischt,Coop,17.0
+Coop St. Galler Kalbsbratwurst,16.5,11.95,27.0,Schwein,Coop,17.0
+Labeyrie Coeur de filet de saumon fumé,37.9,18.95,50.0,Fisch & Meeresfrüchte,Coop,17.0
+"Lachsrückenfilet, ASC",35.0,5.95,30.0,Fisch & Meeresfrüchte,Coop,17.0
+"Coop Lachsforellenfilets, ASC",21.6,14.95,30.0,Fisch & Meeresfrüchte,Coop,17.0
+Coop Naturaplan Bio-Mozzarella,6.75,5.4,20.0,Käse,Coop,17.0
+"Coop Naturaplan Bio-Mozzarella, Stange",12.9,9.95,22.0,Käse,Coop,17.0
+"Hotos Feta, DOP, Griechenland",9.4,7.5,20.0,Käse,Coop,17.0
+Appenzeller Extra-Würzig,2.5,2.1,21.0,Käse,Coop,17.0
+"Coop Le Gruyère, AOP, gerieben",8.85,6.95,21.0,Käse,Coop,17.0
+The Green Mountain Plant-Based Filet,8.95,7.15,20.0,Vegetarisches oder veganes Ersatzprodukt,Coop,17.0
+Yolo Sausages,4.5,3.6,20.0,Schwein,Coop,17.0
+Bell Rindshüftsteak Chili,6.4,4.45,30.0,Rind,Coop,17.0
+Coop Schweinsfilet,5.6,2.8,50.0,Schwein,Coop,17.0
+(exkl. bestehende Aktionen),11.5,6.9,40.0,Geflügel,Coop,17.0
+"Coop Naturafarm Pouletteilspalte, gewürzt, Schweiz, in Selbstbedienung",2.25,1.55,31.0,Fisch & Meeresfrüchte,Coop,17.0
+"Gartenblumen, 15 Stück, gemischte Farben, pro Strauss",14.95,11.95,20.0,Rind,Coop,17.0
+Grill-Champignons,,4.95,,Grillgemüse,Coop,17.0
+Mini Grill-Peperoni,,4.95,,Grillgemüse,Coop,17.0
+Bell Schweins Grill-Spiesse,3.5,2.45,30.0,Gemischt,Coop,17.0
+Coop Naturlapan Bio-Cervelas,1.98,3.95,,Schwein,Coop,17.0
+The Green Mountain Bio-Spiesli,6.95,5.55,20.0,Gemischt,Coop,17.0
+Coop Naturlapan Bio-Schweinschuftsteak,3.7,2.95,20.0,Schwein,Coop,17.0
+"Coop Naturplan Bio-Lachsfilet, mit Haut",,6.4,,Fisch & Meeresfrüchte,Coop,17.0
+Schwertfischfilet ohne Haut,,6.95,,Fisch & Meeresfrüchte,Coop,17.0
+"Gelbfleischthunfischfilet, Wildfang",,6.95,,Fisch & Meeresfrüchte,Coop,17.0
+Coop Naturplan Bio-Dorade Royal,,3.4,,Fisch & Meeresfrüchte,Coop,17.0
+Bell Barbecue Fisch-Grillplatte,,4.95,,Fisch & Meeresfrüchte,Coop,17.0
+Coop Naturplan Bio-Forelle,3.4,2.95,20.0,Fisch & Meeresfrüchte,Coop,17.0
+Coop Naturplan Bio-Lachs-Crevettenpiss,,6.95,,Fisch & Meeresfrüchte,Coop,17.0
+Bell Barbecue Crevettenpiss,,6.5,,Fisch & Meeresfrüchte,Coop,17.0
+Salametti Tradizionali,14.2,9.95,29.0,Geflügel,Coop,17.0
+Poulet,9.95,5.95,40.0,Schwein,Coop,17.0
