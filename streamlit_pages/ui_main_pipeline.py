@@ -169,7 +169,7 @@ def main():
 
     # Step 4: Process each selected directory and store results in session state
     if st.button("Process Directories"):
-        all_directories = [os.path.join(PDF_DIR, f).replace('.pdf','') for f in selected_files]
+        all_directories = [os.path.join(PDF_DIR, f).replace('.pdf','') for f in st.session_state.selected_files]
         
         
         for i, directory in enumerate(all_directories):
