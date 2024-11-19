@@ -7,7 +7,10 @@ from streamlit_pages.ui_main_pipeline import main
 
 # Set up the Streamlit page title
 st.title("Barbeque Discount Data Analysis")
-
+st.logo(
+    'WWF_Logo.svg.png',
+    size="Large"
+)
 # Sidebar navigation
 st.sidebar.title("Navigation")
 navigation = st.sidebar.radio("Go to", ["Upload Leaflets", "Run Data Extraction", "Manual Error Check", "Settings"])
