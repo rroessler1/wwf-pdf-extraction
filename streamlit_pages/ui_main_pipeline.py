@@ -10,10 +10,12 @@ from leaflet_processing.leaflet_reader import LeafletReader
 from openai_integration.openai_client import OpenAIClient
 from result_handling.result_saver import ResultSaver
 
-# Constants
-PDF_DIR = "../pdf-files"
-API_KEY_PATH = "../openai_api_key.txt"
-URL = "https://drive.google.com/drive/folders/1AR2_592V_x4EF97FHv4UPN5zdLTXpVB3"
+from settings import settings
+
+
+PDF_DIR = settings.PDF_DIR
+API_KEY_PATH = settings.API_KEY_PATH
+URL = settings.URL
 
 st.markdown("""
             <style>
@@ -124,31 +126,28 @@ def main():
         select_all_checkbox = st.checkbox("Select All")
         deselect_all_checkbox = st.checkbox("Deselect All")
         
+        file_df = pd.DataFrame({
+            'PDF File':files,
+            'Select': [False]*len(files)
+        })
+        
         # Table headers
-        col1, col2 = st.columns([0.1, 0.9])
-        col1.write("Select")
-        col2.write("File Name")
+        df_edited = st.data_editor(
+            file_df,
+            column_config={
+                'Select': st.column_config.CheckboxColumn(
+                    "Select?",
+                    help="Select your **favorite** files",
+                    default=False,
+                )
+            },
+            disabled=["PDF File"],
+            hide_index=True,
+        )
         
-        # Table rows for each file
-        selected_files = []
-        for file in files:
-            # Display each file with a checkbox in two columns
-            col1, col2 = st.columns([0.05, 0.9])
-
-            # If "Select All" is checked, all individual checkboxes are set to True
-            checked = (select_all_checkbox or st.session_state.get(f"checkbox_{file}", False)) and not deselect_all_checkbox
-            
-            # Create checkbox for each file
-            checked = col1.checkbox("", key=f"checkbox_{file}", value=checked)
-            col2.write(file)
-            
-            # Add the file to selected list if checkbox is checked
-            if checked:
-                selected_files.append(file)
         
-
         # Update the session state with selected files
-        st.session_state.selected_files = selected_files
+        st.session_state.selected_files = df_edited[([not deselect_all_checkbox]*len(df_edited['Select']))*(df_edited['Select'])+[select_all_checkbox ]*len(df_edited['Select'])]["PDF File"].to_list()
 
         # Display selected files for validation (optional)
     st.write("Selected files:", st.session_state.selected_files)
