@@ -26,7 +26,10 @@ def show_settings_page():
     def save_settings(file_path, settings):
         with open(file_path, "w") as file:
             for key, value in settings.items():
-                file.write(f'{key} = "{value}"\n')
+                if key in ['EXTRACTED_DATA_COLUMNS', 'NUMBER_OF_CHATGPT_VALIDATIONS']:
+                    file.write(f'{key} = {value}\n')
+                else:
+                    file.write(f'{key} = "{value}"\n')
 
 
 
