@@ -1,6 +1,7 @@
 # categorization/product_categorizer.py
 
 import pandas as pd
+import time
 from typing import Any
 from PIL import Image
 from jupyterlab.semver import compare
@@ -30,6 +31,7 @@ class ProductCategorizer:
         step_size = 5
         for i in range(0, len(product_names), step_size):
             categorization_results = openai_client.categorize_products(product_names[i: i+step_size])
+            time.sleep(31)
             product_categories.extend(categorization_results.categories)
 
         if len(data.index) == len(product_categories):

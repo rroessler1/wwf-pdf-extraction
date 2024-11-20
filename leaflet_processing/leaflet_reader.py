@@ -21,10 +21,10 @@ class LeafletReader:
             download_url (str): URL of the leaflet folder to download.
         """
         self.download_url = download_url
-        
+
         # if do_download:
         #     self.download_leaflet()
-            
+
         # self.all_files = os.listdir(self.pdf_dir)
         # self.selected_files = os.listdir(self.pdf_dir)
 
@@ -53,6 +53,7 @@ class LeafletReader:
         if not overwrite_images:
             reader = PdfReader(pdf_path)
             png_files = glob.glob(f"{output_dir}/*.png")
+            png_files = [os.path.basename(f) for f in png_files]
 
 
             expected_image_names = set([f"{i+1}.png" for i in range(len(reader.pages))])
@@ -60,6 +61,7 @@ class LeafletReader:
                 print(f"Found PNG images for {pdf_path}. Skipping conversion from PDF to images.")
                 return natsorted(png_files)
 
+        print(f"Converting {pdf_path} to images.")
         os.makedirs(output_dir, exist_ok=True)
 
         images = convert_from_path(pdf_path)
