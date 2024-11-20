@@ -15,11 +15,16 @@ from openai_integration.mock_client import MockLLM
 from settings.settings import NUMBER_OF_CHATGPT_VALIDATIONS
 from validation.validation_comparison import compare_validation
 
+import streamlit as st
+
+
 PDF_DIR = "pdf-files"
 API_KEY_PATH = "openai_api_key.txt"
 URL = "https://drive.google.com/drive/folders/1AR2_592V_x4EF97FHv4UPN5zdLTXpVB3"
 DO_DOWNLOAD = False # just used for testing, saves time
 USE_TEST_LLM_CLIENT = False
+
+
 
 def load_api_key(api_key_path: str) -> str:
     with open(api_key_path, 'r') as file:
@@ -75,20 +80,33 @@ def get_all_image_paths(directory: str):
     return natsorted(paths)
 
 
-def process_directory(directory: str, output_dir: str, openai_client, categorizer, result_saver):
+def process_directory(directory: str, output_dir: str, openai_client, categorizer, result_saver,displaymood=False):
     if result_saver.results_exist(output_dir):
-        print(f"Already have results for {directory}, skipping...")
-        return
+        if displaymood:
+            st.write(f"Results already exist for {directory}, skipping...")
+        else:
+            print(f"Already have results for {directory}, skipping...")
+        # Construct the path to the CSV file
+        csv_path = os.path.join(PDF_DIR, "results.csv")
+        # Read the CSV file into a DataFrame
+        csv_df = pd.read_csv(csv_path)
+        return True,csv_df
 
     image_paths = get_all_image_paths(directory)
     all_products = []
 
-
+    if displaymood:
+        progress_bar = st.progress(0)
+        total_directories = len(image_paths)
+    
     all_validation_results = [[] for i in range(NUMBER_OF_CHATGPT_VALIDATIONS)]
     # Call LLMs for all images for one PDF at a time
-    for image_path in image_paths:
+    for i,image_path in enumerate(image_paths):
         with open(image_path, "rb") as image_file:
-            print(f"Extracting data from {image_path}")
+            if displaymood:
+                st.write(f"Extracting data from {image_path}")
+            else:
+                print(f"Extracting data from {image_path}")
             response = openai_client.extract(image_file.read())
 
             # Validate each extracted product from the response
@@ -102,7 +120,7 @@ def process_directory(directory: str, output_dir: str, openai_client, categorize
                     for validation in validation_response.all_products:
                         validation_as_dict = validation.model_dump()
                         all_validation_results[i].append(validation_as_dict)
-
+        
 
             for product in response.all_products:
                 product_as_dict = product.model_dump()
@@ -111,7 +129,10 @@ def process_directory(directory: str, output_dir: str, openai_client, categorize
                 product_as_dict['folder'] = os.path.basename(directory)
                 product_as_dict['page_number'] = os.path.basename(image_path)
                 all_products.append(product_as_dict)
-
+        
+        if displaymood:
+            progress_bar.progress((i) / total_directories)
+        
     # Create a DataFrame for extracted results
     extracted_df = pd.DataFrame(all_products)
     extracted_df = extracted_df.add_prefix('extracted_')  # Prefix columns with 'extracted_'
@@ -134,7 +155,7 @@ def process_directory(directory: str, output_dir: str, openai_client, categorize
     # Save categorized products to an Excel file
     output_path = result_saver.save(categorized_df, output_dir)
     print(f"Categorized results from {directory} saved at: {output_path}")
-
+    return True, categorized_df
 
 if __name__ == "__main__":
     main()
