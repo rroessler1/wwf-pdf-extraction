@@ -87,7 +87,7 @@ def process_directory(directory: str, output_dir: str, openai_client, categorize
         else:
             print(f"Already have results for {directory}, skipping...")
         # Construct the path to the CSV file
-        csv_path = os.path.join(PDF_DIR, "results.csv")
+        csv_path = os.path.join(directory, "results.csv")
         # Read the CSV file into a DataFrame
         csv_df = pd.read_csv(csv_path)
         return True,csv_df
