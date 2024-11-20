@@ -6,3 +6,4 @@ pdf-files/
 **/__pycache__
 env
 results
+.streamlit/

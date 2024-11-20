@@ -1,7 +1,8 @@
 import base64
+import logging
 
 import pandas as pd
-from openai import OpenAI
+from openai import OpenAI, RateLimitError
 
 from categorization.categorization_system_prompt import CATEGORIZATION_SYSTEM_PROMPT
 from categorization.categorization_user_prompt import CATEGORIZATION_USER_PROMPT
@@ -9,7 +10,15 @@ from validation.validation_system_prompt import VALIDATION_SYSTEM_PROMPT
 from validation.validation_user_prompt import VALIDATION_USER_PROMPT
 from leaflet_processing.constants import OPENAI_PROMPT
 from .models import Results, CategorizationResult
+from tenacity import retry, stop_after_attempt, wait_fixed, retry_if_exception_type, before_sleep_log
 from typing import List
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+MODEL = "gpt-4o-mini"
+NUM_RETRY_ATTEMPTS = 5
+RETRY_WAIT_IN_SECS = 60
 
 class OpenAIClient:
     def __init__(self, api_key: str):
@@ -28,13 +37,19 @@ class OpenAIClient:
         """
         return base64.b64encode(image_data).decode('utf-8')
 
+    @retry(
+        retry=retry_if_exception_type(RateLimitError),
+        stop=stop_after_attempt(NUM_RETRY_ATTEMPTS),
+        wait=wait_fixed(RETRY_WAIT_IN_SECS),
+        before_sleep=before_sleep_log(logger, logging.INFO),
+    )
     def _get_data_from_image(self, base64_image: str) -> Results:
         """
         Sends the base64-encoded image to OpenAI and receives extracted data.
         Results: Parsed structured data containing product information.
         """
         response = self.client.beta.chat.completions.parse(
-            model="gpt-4o-mini",
+            model=MODEL,
             messages=[
                 {
                     "role": "user",
@@ -58,6 +73,12 @@ class OpenAIClient:
         # Extract and parse the response
         return response.choices[0].message.parsed
 
+    @retry(
+        retry=retry_if_exception_type(RateLimitError),
+        stop=stop_after_attempt(NUM_RETRY_ATTEMPTS),
+        wait=wait_fixed(RETRY_WAIT_IN_SECS),
+        before_sleep=before_sleep_log(logger, logging.INFO),
+    )
     def categorize_products(self, products: List[str]) -> CategorizationResult:
         """
         Sends prompt to OpenAI to get product categorization for products
@@ -66,7 +87,7 @@ class OpenAIClient:
         """
 
         response = self.client.beta.chat.completions.parse(
-            model="gpt-4o-mini",
+            model=MODEL,
             messages=[
                 {
                     "role": "system",
@@ -92,10 +113,16 @@ class OpenAIClient:
     def build_product_data_validation_prompt(products: Results) -> str:
         return VALIDATION_USER_PROMPT + "\n" + products.__str__()
 
+    @retry(
+        retry=retry_if_exception_type(RateLimitError),
+        stop=stop_after_attempt(NUM_RETRY_ATTEMPTS),
+        wait=wait_fixed(RETRY_WAIT_IN_SECS),
+        before_sleep=before_sleep_log(logger, logging.INFO),
+    )
     def validate_product_data(self, products: Results, image: bytes) -> Results:
         encoded_image = self._encode_image(image)
         response = self.client.beta.chat.completions.parse(
-            model="gpt-4o-mini",
+            model=MODEL,
             messages=[
                 {
                     "role": "system",

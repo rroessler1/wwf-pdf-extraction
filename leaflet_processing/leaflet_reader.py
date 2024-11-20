@@ -2,11 +2,13 @@
 
 import gdown
 import glob
+import io
 import os
+import streamlit as st
 
 from natsort import natsorted
 from typing import List
-from pdf2image import convert_from_path
+import pypdfium2 as pdfium
 from PyPDF2 import PdfReader
 
 
@@ -21,10 +23,10 @@ class LeafletReader:
             download_url (str): URL of the leaflet folder to download.
         """
         self.download_url = download_url
-        
+
         # if do_download:
         #     self.download_leaflet()
-            
+
         # self.all_files = os.listdir(self.pdf_dir)
         # self.selected_files = os.listdir(self.pdf_dir)
 
@@ -38,7 +40,7 @@ class LeafletReader:
         gdown.download_folder(self.download_url, output=pdf_dir)
         print("Leaflets downloaded successfully.")
 
-    def convert_pdf_to_images(self, pdf_path: str, output_dir: str, overwrite_images = False) -> List[str]:
+    def convert_pdf_to_images(self, pdf_path, output_dir: str, overwrite_images = False) -> List[str]:
         """
         Splits a PDF into individual images.
 
@@ -50,24 +52,32 @@ class LeafletReader:
         Returns:
             List[str]: List of image paths.
         """
+        # FIXME: this no longer works for the non-UI code path, fix that
         if not overwrite_images:
-            reader = PdfReader(pdf_path)
+            reader = PdfReader(io.BytesIO(pdf_path.read()))
             png_files = glob.glob(f"{output_dir}/*.png")
+            png_files = [os.path.basename(f) for f in png_files]
+            pdf_name, _ = os.path.splitext(os.path.basename(pdf_path.name))
 
 
-            expected_image_names = set([f"{i+1}.png" for i in range(len(reader.pages))])
+            expected_image_names = set([f"{pdf_name}_{i+1}.png" for i in range(len(reader.pages))])
             if len(expected_image_names - set(png_files)) == 0:
                 print(f"Found PNG images for {pdf_path}. Skipping conversion from PDF to images.")
                 return natsorted(png_files)
 
+        print(f"Converting {pdf_path} to images.")
         os.makedirs(output_dir, exist_ok=True)
 
-        images = convert_from_path(pdf_path)
+        pdf_path.seek(0)
+        pdf_doc = pdfium.PdfDocument(pdf_path.read())
         paths = []
 
-        for i, image in enumerate(images):
-            output_filename = os.path.join(output_dir, f"{i+1}.png")
+        for i in range(len(pdf_doc)):
+            page = pdf_doc[i]
+            image = page.render(scale=4).to_pil()
+            output_filename = os.path.join(output_dir, f"{pdf_name}_{i+1}.png")
             image.save(output_filename, format='PNG')
             paths.append(output_filename)
+            st.write(f"Wrote image [{i}].")
 
         return natsorted(paths)

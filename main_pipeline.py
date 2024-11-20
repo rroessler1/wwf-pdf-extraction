@@ -1,6 +1,7 @@
 import glob
 import os
 import pandas as pd
+import time
 
 from categorization.product_categorizer import ProductCategorizer
 from datetime import datetime
@@ -22,9 +23,9 @@ PDF_DIR = "pdf-files"
 API_KEY_PATH = "openai_api_key.txt"
 URL = "https://drive.google.com/drive/folders/1AR2_592V_x4EF97FHv4UPN5zdLTXpVB3"
 DO_DOWNLOAD = False # just used for testing, saves time
-USE_TEST_LLM_CLIENT = False
-
-
+DO_CATEGORIZE = True
+USE_TEST_LLM_CLIENT = True
+SLEEP_TIME = 0 # TODO: test that we're not being rate limited using their API key
 
 def load_api_key(api_key_path: str) -> str:
     with open(api_key_path, 'r') as file:
@@ -61,6 +62,7 @@ def main():
                 print(f"Already have results for {filename}, skipping...")
                 continue
             else:
+                print(f"Processing {pdf_path}.")
                 leaflet_reader.convert_pdf_to_images(pdf_path, output_dir)
 
     all_directories = [entry.path for entry in os.scandir(PDF_DIR) if entry.is_dir()]
@@ -80,7 +82,7 @@ def get_all_image_paths(directory: str):
     return natsorted(paths)
 
 
-def process_directory(directory: str, output_dir: str, openai_client, categorizer, result_saver,displaymood=False):
+def process_directory(directory: str, output_dir: str, openai_client: OpenAIClient, categorizer: ProductCategorizer, result_saver, displaymood=False):
     if result_saver.results_exist(output_dir):
         if displaymood:
             st.write(f"Results already exist for {directory}, skipping...")
@@ -98,7 +100,7 @@ def process_directory(directory: str, output_dir: str, openai_client, categorize
     if displaymood:
         progress_bar = st.progress(0)
         total_directories = len(image_paths)
-    
+
     all_validation_results = [[] for i in range(NUMBER_OF_CHATGPT_VALIDATIONS)]
     # Call LLMs for all images for one PDF at a time
     for i,image_path in enumerate(image_paths):
@@ -108,19 +110,22 @@ def process_directory(directory: str, output_dir: str, openai_client, categorize
             else:
                 print(f"Extracting data from {image_path}")
             response = openai_client.extract(image_file.read())
+            time.sleep(SLEEP_TIME)
 
             # Validate each extracted product from the response
             for i in range(NUMBER_OF_CHATGPT_VALIDATIONS): # Number of Checkings
+                print(f"Running validation: {i}")
                 # Validate the product data
                 image_file.seek(0)  # Reset file pointer to beginning for reuse
                 validation_response = openai_client.validate_product_data(response, image_file.read())
+                time.sleep(SLEEP_TIME)
 
                 # Append the validation result to the validation_results list
                 if validation_response:
                     for validation in validation_response.all_products:
                         validation_as_dict = validation.model_dump()
                         all_validation_results[i].append(validation_as_dict)
-        
+
 
             for product in response.all_products:
                 product_as_dict = product.model_dump()
@@ -129,10 +134,10 @@ def process_directory(directory: str, output_dir: str, openai_client, categorize
                 product_as_dict['folder'] = os.path.basename(directory)
                 product_as_dict['page_number'] = os.path.basename(image_path)
                 all_products.append(product_as_dict)
-        
+
         if displaymood:
             progress_bar.progress((i) / total_directories)
-        
+
     # Create a DataFrame for extracted results
     extracted_df = pd.DataFrame(all_products)
     extracted_df = extracted_df.add_prefix('extracted_')  # Prefix columns with 'extracted_'
@@ -145,17 +150,25 @@ def process_directory(directory: str, output_dir: str, openai_client, categorize
         # Combine extracted data with validation data
         extracted_df = pd.concat([extracted_df, validation_df], axis=1)
 
-    compare_validation(extracted_df)
+    if NUMBER_OF_CHATGPT_VALIDATIONS > 0:
+        compare_validation(extracted_df)
 
-    # Categorize products
-    print(f"Categorizing products for {directory}")
-    categorized_df = categorizer.categorize_products(extracted_df, openai_client)
-    append_metadata(categorized_df)
+    output_path = result_saver.save(extracted_df, output_dir)
+    print(f"Results from {directory} saved at: {output_path}")
 
-    # Save categorized products to an Excel file
-    output_path = result_saver.save(categorized_df, output_dir)
-    print(f"Categorized results from {directory} saved at: {output_path}")
-    return True, categorized_df
+    if DO_CATEGORIZE:
+        # Categorize products
+        print(f"Categorizing products for {directory}")
+        categorized_df = categorizer.categorize_products(extracted_df, openai_client)
+        append_metadata(categorized_df)
+
+        # Save categorized products to an Excel file
+        output_path = result_saver.save(categorized_df, output_dir)
+        print(f"Categorized results from {directory} saved at: {output_path}")
+        return True, categorized_df
+
+    return True, extracted_df
+
 
 if __name__ == "__main__":
     main()
