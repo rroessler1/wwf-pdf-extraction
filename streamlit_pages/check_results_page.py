@@ -7,41 +7,47 @@ def show_check_results_page():
     result_csv_path = 'pdf-files/results.csv'
     data = pd.read_csv(result_csv_path)
 
-    # Ensure 'page_number' and 'categorization_all_same' columns are present in the dataframe
-    if 'page_number' not in data.columns or 'categorization_all_same' not in data.columns:
-        st.error("The dataframe must have 'page_number' and 'categorization_all_same' columns.")
+    # Ensure 'extracted_folder', 'extracted_page_number', and 'categorization_all_same' columns are present
+    required_columns = ['extracted_folder', 'extracted_page_number', 'categorization_all_same']
+    if not all(col in data.columns for col in required_columns):
+        st.error(f"The dataframe must have {required_columns} columns.")
         st.stop()
 
-    # Get the unique page numbers
-    unique_pages = sorted(data['page_number'].unique())
+    # Get the unique combinations of folder and page number
+    unique_images = data[['extracted_folder', 'extracted_page_number']].drop_duplicates()
 
     # Initialize session state for current page index if not already set
     if 'current_page_index' not in st.session_state:
         st.session_state.current_page_index = 0
 
-    # Navigation buttons for switching between images
+    # Navigation buttons for switching between images (top)
     col1, col2 = st.columns([1, 1])
     with col1:
-        if st.button("Previous Image") and st.session_state.current_page_index > 0:
+        if st.button("Previous Image (Top)") and st.session_state.current_page_index > 0:
             st.session_state.current_page_index -= 1
     with col2:
-        if st.button("Next Image") and st.session_state.current_page_index < len(unique_pages) - 1:
+        if st.button("Next Image (Top)") and st.session_state.current_page_index < len(unique_images) - 1:
             st.session_state.current_page_index += 1
 
-    # Get the current page number based on session state index
-    current_page_number = unique_pages[st.session_state.current_page_index]
+    # Get the current folder and page number based on session state index
+    current_image = unique_images.iloc[st.session_state.current_page_index]
+    current_folder = current_image['extracted_folder']
+    current_page_number = current_image['extracted_page_number']
 
-    # Filter the dataframe based on the current page number and categorization_all_same == True
-    filtered_data = data[(data['page_number'] == current_page_number) & (data['categorization_all_same'] == True)]
-    # TODO Update Condition
+    # Filter the dataframe based on the current folder, page number, and categorization_all_same == True
+    filtered_data = data[
+        (data['extracted_folder'] == current_folder) &
+        (data['extracted_page_number'] == current_page_number) &
+        (data['categorization_all_same'] == True)
+    ]
 
-    # Load the image corresponding to the current page number
+    # Load the image corresponding to the current folder and page number
     try:
-        image_path = f'pdf-files/aldi/{current_page_number}'  # Assuming images are named with page numbers
+        image_path = f'pdf-files/{current_folder}/{current_page_number}'
         image = Image.open(image_path)
-        st.sidebar.image(image, caption=f"Image for Page {current_page_number}", use_column_width=True)
+        st.sidebar.image(image, caption=f"Image for {current_folder}, Page {current_page_number}", use_column_width=True)
     except FileNotFoundError:
-        st.sidebar.warning(f"Image not found for page number {current_page_number}")
+        st.sidebar.warning(f"Image not found for {current_folder}, Page {current_page_number}")
 
     # Set up the Streamlit page
     st.title("Supermarket Data Editing Tool")
@@ -51,15 +57,12 @@ def show_check_results_page():
         with st.form(key=f"form_{index}"):
             st.write(f"Editing Row {index + 1}")
 
-            # TODO Update Columns
             # Create editable input fields for each relevant column in the row
-            product_name = st.text_input("Product Name", value=str(df.loc[index, "product_name"]))
-            original_price = st.text_input("Original Price", value=str(df.loc[index, "original_price"]))
-            discount_price = st.text_input("Discount Price", value=str(df.loc[index, "discount_price"]))
-            percentage_discount = st.text_input("Percentage Discount", value=str(df.loc[index, "percentage_discount"]))
-            discount_details = st.text_input("Discount Details", value=str(df.loc[index, "discount_details"]))
-            date_collected = st.text_input("Date Collected", value=str(df.loc[index, "date_collected"]))
-            calendar_week = st.text_input("Calendar Week", value=str(df.loc[index, "calendar_week"]))
+            product_name = st.text_input("Product Name", value=str(df.loc[index, "final_product_name"]))
+            original_price = st.text_input("Original Price", value=str(df.loc[index, "final_original_price"]))
+            discount_price = st.text_input("Discount Price", value=str(df.loc[index, "final_discount_price"]))
+            percentage_discount = st.text_input("Percentage Discount", value=str(df.loc[index, "final_percentage_discount"]))
+            discount_details = st.text_input("Discount Details", value=str(df.loc[index, "extracted_discount_details"]))
             final_category = st.text_input("Final Category", value=str(df.loc[index, "final_category"]))
 
             # Button to save the changes for this row
@@ -67,13 +70,11 @@ def show_check_results_page():
 
             if submitted:
                 # Update the dataframe with the new values
-                df.loc[index, "product_name"] = product_name
-                df.loc[index, "original_price"] = original_price
-                df.loc[index, "discount_price"] = discount_price
-                df.loc[index, "percentage_discount"] = percentage_discount
-                df.loc[index, "discount_details"] = discount_details
-                df.loc[index, "date_collected"] = date_collected
-                df.loc[index, "calendar_week"] = calendar_week
+                df.loc[index, "final_product_name"] = product_name
+                df.loc[index, "final_original_price"] = original_price
+                df.loc[index, "final_discount_price"] = discount_price
+                df.loc[index, "final_percentage_discount"] = percentage_discount
+                df.loc[index, "extracted_discount_details"] = discount_details
                 df.loc[index, "final_category"] = final_category
 
                 data.to_csv(csv_path, index=False)
@@ -83,6 +84,16 @@ def show_check_results_page():
     if not filtered_data.empty:
         for idx in filtered_data.index:
             edit_row(idx, data, result_csv_path)
+
+        # Display navigation buttons below the edit section
+        st.write("### Navigation")
+        col1, col2 = st.columns([1, 1])
+        with col1:
+            if st.button("Previous Image (Bottom)") and st.session_state.current_page_index > 0:
+                st.session_state.current_page_index -= 1
+        with col2:
+            if st.button("Next Image (Bottom)") and st.session_state.current_page_index < len(unique_images) - 1:
+                st.session_state.current_page_index += 1
 
         # Display the updated dataframe after editing
         st.write("### Updated Dataframe")
