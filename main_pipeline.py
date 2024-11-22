@@ -24,7 +24,7 @@ API_KEY_PATH = "openai_api_key.txt"
 URL = "https://drive.google.com/drive/folders/1AR2_592V_x4EF97FHv4UPN5zdLTXpVB3"
 DO_DOWNLOAD = False # just used for testing, saves time
 DO_CATEGORIZE = False
-USE_TEST_LLM_CLIENT = False
+USE_TEST_LLM_CLIENT = True
 
 def load_api_key(api_key_path: str) -> str:
     with open(api_key_path, 'r') as file:
