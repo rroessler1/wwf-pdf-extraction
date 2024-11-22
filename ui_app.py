@@ -17,7 +17,7 @@ navigation = st.sidebar.radio("Go to", ["Upload Leaflets", "Run Data Extraction"
 
 # Show the selected page
 if navigation == "Upload Leaflets":
-    show_upload_page()
+    main()
 elif navigation == "Run Data Extraction":
     main()
 elif navigation == "Manual Error Check":
